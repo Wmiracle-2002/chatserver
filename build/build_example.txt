@@ -1,3 +1,0 @@
-在当前build目录下执行: cmake ..
-再执行 make
-最后会在bin目录下生成ChatServer和ChatClient执行文件
