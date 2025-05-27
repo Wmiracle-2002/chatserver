@@ -26,12 +26,17 @@ ChatService::ChatService(){
     }
 }
 
+// 析构函数
+ChatService::~ChatService(){
+    
+}
+
 // 处理登录业务
 void ChatService::login(const TcpConnectionPtr& conn, json& js, Timestamp time){
-    // LOG_INFO << "do login service!!!";
+    //LOG_INFO << "do login service!!!";
     int id = js["id"];
     string password = js["password"];
-    User user = _userModel.query(id);
+    User user = _userModel.query(*cp, id);
     if(user.getId() == id && user.getPwd() == password){
         if(user.getState() == "online"){
             // 重复登陆
@@ -40,6 +45,7 @@ void ChatService::login(const TcpConnectionPtr& conn, json& js, Timestamp time){
             response["errno"] = 2;
             response["errmsg"] = "this id had been already online!";
             conn->send(response.dump());
+            return;
         }
         // 登陆成功
         {
@@ -51,20 +57,20 @@ void ChatService::login(const TcpConnectionPtr& conn, json& js, Timestamp time){
         _redis.subscribe(id);
         // 更新登陆状态
         user.setState("online");
-        _userModel.updateState(user);
+        _userModel.updateState(*cp, user);
         json response;
         response["msgid"] = LOGIN_MSG_ACK;
         response["errno"] = 0;
         response["id"] = user.getId();
         response["name"] = user.getName();
         // 查询该用户是否有离线消息
-        vector<string> vec = _offlineMsgModel.query(id);
+        vector<string> vec = _offlineMsgModel.query(*cp, id);
         if(!vec.empty()){
             response["offlinemsg"] = vec;
-            _offlineMsgModel.remove(id);
+            _offlineMsgModel.remove(*cp, id);
         }
         // 查询该用户的好友信息并返回
-        vector<User> userVec = _friendModel.query(id);
+        vector<User> userVec = _friendModel.query(*cp, id);
         if(!userVec.empty()){
             vector<string> vec2;
             for(User& user : userVec){
@@ -77,7 +83,7 @@ void ChatService::login(const TcpConnectionPtr& conn, json& js, Timestamp time){
             response["friends"] = vec2;
         }
         // 查询用户的群组信息
-        vector<Group> groupuserVec = _groupModel.queryGroups(id);
+        vector<Group> groupuserVec = _groupModel.queryGroups(*cp, id);
         if (!groupuserVec.empty()){
             // group:[{groupid:[xxx, xxx, xxx, xxx]}]
             vector<string> groupV;
@@ -119,7 +125,7 @@ void ChatService::reg(const TcpConnectionPtr& conn, json& js, Timestamp time){
     User user;
     user.setName(name);
     user.setPwd(password);
-    bool state = _userModel.insert(user);
+    bool state = _userModel.insert(*cp, user);
     if(state){
         // 注册成功
         json response;
@@ -151,13 +157,13 @@ void ChatService::oneChat(const TcpConnectionPtr& conn, json& js, Timestamp time
         }
     }
     // 查询对方是否在线
-    User user = _userModel.query(toid);
+    User user = _userModel.query(*cp, toid);
     if(user.getState() == "online"){
         _redis.publish(toid, js.dump());
         return;
     }
     // 对方不在线，存储离线消息
-    _offlineMsgModel.insert(toid, js.dump());
+    _offlineMsgModel.insert(*cp, toid, js.dump());
 }
 
 // 添加好友业务
@@ -165,7 +171,7 @@ void ChatService::addFriend(const TcpConnectionPtr& conn, json& js, Timestamp ti
     int userid = js["id"];
     int friendid = js["friendid"];
     // 存储好友信息
-    _friendModel.insert(userid, friendid);
+    _friendModel.insert(*cp, userid, friendid);
 }
 
 // 删除好友业务
@@ -173,7 +179,7 @@ void ChatService::removeFriend(const TcpConnectionPtr& conn, json& js, Timestamp
     int userid = js["id"];
     int friendid = js["friendid"];
     // 删除好友信息
-    _friendModel.remove(userid, friendid);
+    _friendModel.remove(*cp, userid, friendid);
 }
 
 // 创建群组业务
@@ -183,9 +189,9 @@ void ChatService::createGroup(const TcpConnectionPtr& conn, json& js, Timestamp 
     string groupdesc = js["groupdesc"];
     // 存储新创建的群组信息
     Group group(-1, groupname, groupdesc);
-    if(_groupModel.createGroup(group)){
+    if(_groupModel.createGroup(*cp, group)){
         // 存储群组创建人信息
-        _groupModel.addGroup(userid, group.getId(), "creator");
+        _groupModel.addGroup(*cp, userid, group.getId(), "creator");
     }
 }
 
@@ -193,14 +199,14 @@ void ChatService::createGroup(const TcpConnectionPtr& conn, json& js, Timestamp 
 void ChatService::addGroup(const TcpConnectionPtr& conn, json& js, Timestamp time){
     int userid = js["id"];
     int groupid = js["groupid"];
-    _groupModel.addGroup(userid, groupid, "normal");
+    _groupModel.addGroup(*cp, userid, groupid, "normal");
 }
 
 // 群聊天业务
 void ChatService::groupChat(const TcpConnectionPtr& conn, json& js, Timestamp time){
     int userid = js["id"];
     int groupid = js["groupid"];
-    vector<int> useridVec = _groupModel.queryGroupUsers(userid, groupid);
+    vector<int> useridVec = _groupModel.queryGroupUsers(*cp, userid, groupid);
     lock_guard<mutex> lock(_connMutex);
     for(int id : useridVec){
         auto it = _userConnectionMap.find(id);
@@ -209,12 +215,12 @@ void ChatService::groupChat(const TcpConnectionPtr& conn, json& js, Timestamp ti
         }
         else{
             // 查询id是否在线
-            User user = _userModel.query(id);
+            User user = _userModel.query(*cp, id);
             if(user.getState() == "online"){
                 _redis.publish(id, js.dump());
             }
             else{
-                _offlineMsgModel.insert(id, js.dump());
+                _offlineMsgModel.insert(*cp, id, js.dump());
             }
         }
     }
@@ -234,7 +240,7 @@ void ChatService::logout(const TcpConnectionPtr& conn, json& js, Timestamp time)
     _redis.unsubscribe(userid);
     // 更新用户状态信息
     User user(userid, "", "", "offline");
-    _userModel.updateState(user);
+    _userModel.updateState(*cp, user);
 }
 
 // 获取消息对应的处理器
@@ -260,13 +266,13 @@ void ChatService::handleRedisSubscribeMessage(int userid, string msg){
         return;
     }
     // 存储该用户的离线消息
-    _offlineMsgModel.insert(userid, msg);
+    _offlineMsgModel.insert(*cp, userid, msg);
 }
 
 // 服务器异常，业务重置
 void ChatService::reset(){
     // 把online状态的用户设置成offline
-    _userModel.resetState();
+    _userModel.resetState(*cp);
 }
 
 // 处理客户端异常退出
@@ -289,6 +295,6 @@ void ChatService::clientCloseException(const TcpConnectionPtr& conn){
     // 更新用户的状态信息
     if(user.getId() != -1){
         user.setState("offline");
-        _userModel.updateState(user);
+        _userModel.updateState(*cp, user);
     }
 }

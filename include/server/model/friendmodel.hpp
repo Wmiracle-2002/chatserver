@@ -3,6 +3,7 @@
 
 #include "user.hpp"
 #include <vector>
+#include "connpool.h"
 
 using namespace std;
 
@@ -10,11 +11,11 @@ using namespace std;
 class FriendModel{
 public:
     // 添加好友关系
-    void insert(int userid, int friendid);
+    void insert(ConnectionPool &cp, int userid, int friendid);
     // 返回用户的好友列表
-    vector<User> query(int userid);
+    vector<User> query(ConnectionPool &cp, int userid);
     // 删除好友关系
-    void remove(int userid, int friendid);
+    void remove(ConnectionPool &cp, int userid, int friendid);
 };
 
 #endif

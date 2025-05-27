@@ -14,6 +14,7 @@
 #include "friendmodel.hpp"
 #include "group.hpp"
 #include "groupmodel.hpp"
+#include "connpool.h"
 
 using namespace std;
 using namespace muduo;
@@ -28,6 +29,8 @@ class ChatService{
 public:
     // 获取单例对象的接口函数
     static ChatService* instance();
+    // 析构函数
+    ~ChatService();
     // 处理登录业务
     void login(const TcpConnectionPtr& conn, json& js, Timestamp time);
     // 处理注册业务
@@ -65,9 +68,10 @@ private:
     OfflineMsgModel _offlineMsgModel;
     FriendModel _friendModel;
     GroupModel _groupModel;
-
     // redis操作对象
     Redis _redis;
+    // 数据库连接池
+    ConnectionPool* cp = ConnectionPool::getConnectPool();
 };
 
 #endif

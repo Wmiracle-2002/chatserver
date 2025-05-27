@@ -1,5 +1,6 @@
 #include "chatserver.hpp"
 #include "chatservice.hpp"
+#include "connpool.h"
 #include <iostream>
 #include <signal.h>
 

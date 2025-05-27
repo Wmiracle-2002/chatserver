@@ -99,12 +99,11 @@ void doLoginResponse(json &responsejs){
         // 记录当前用户的id和name
         g_currentUser.setId(responsejs["id"].get<int>());
         g_currentUser.setName(responsejs["name"]);
-        
+        // 初始化
+        g_currentUserFriendList.clear();
+        g_currentUserGroupList.clear();
         // 记录当前用户的好友列表信息
         if(responsejs.contains("friends")){
-            // 初始化
-            g_currentUserFriendList.clear();
-
             vector<string> vec = responsejs["friends"];
             for(string &str : vec){
                 json js = json::parse(str);
@@ -118,9 +117,6 @@ void doLoginResponse(json &responsejs){
 
         // 记录当前用户的群组列表信息
         if(responsejs.contains("groups")){
-            // 初始化
-            g_currentUserGroupList.clear();
-
             vector<string> vec1 = responsejs["groups"];
             for(string &groupstr : vec1){
                 json groupjs = json::parse(groupstr);
@@ -184,7 +180,6 @@ void readTaskHandler(int clientfd){
             close(clientfd);
             exit(-1);
         }
-
         // 接收ChatServer转发的数据，反序列化生成json数据对象
         json js = json::parse(buffer);
         int msgtype = js["msgid"].get<int>();
@@ -314,7 +309,7 @@ int main(int argc, char **argv){
             js["id"] = id;
             js["password"] = pwd;
             string request = js.dump();
-            
+
             g_isLoginSuccess = false;
 
             int len = send(clientfd, request.c_str(), strlen(request.c_str()) + 1, 0);
@@ -323,7 +318,7 @@ int main(int argc, char **argv){
             }
 
             sem_wait(&rwsem);   // 等待信号量，由子线程处理完登录的响应消息后通知这里
-            
+
             if(g_isLoginSuccess){
                 // 进入聊天主菜单页面
                 isMainMenuRunning = true;
