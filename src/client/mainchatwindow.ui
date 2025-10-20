@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainChatWindow</class>
+ <widget class="QMainWindow" name="MainChatWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>595</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>1</y>
+      <width>237</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="itemLayout">
+     <item>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="Friend">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
+        </property>
+        <attribute name="title">
+         <string>Tab 1</string>
+        </attribute>
+        <widget class="QPushButton" name="addfriendButton">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>510</y>
+           <width>91</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>addfriend</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="addfriendEdit">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>510</y>
+           <width>141</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QListWidget" name="friendWidget">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>231</width>
+           <height>511</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="Group">
+        <attribute name="title">
+         <string>Tab 2</string>
+        </attribute>
+        <widget class="QLineEdit" name="addgroupEdit">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>510</y>
+           <width>141</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="addgroupButton">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>510</y>
+           <width>91</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>addgroup</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="creategroupButton">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>480</y>
+           <width>91</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>creategroup</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="creategroupEdit">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>480</y>
+           <width>141</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QListWidget" name="groupWidget">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>231</width>
+           <height>481</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="chatWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>239</x>
+      <y>0</y>
+      <width>562</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <widget class="QTextEdit" name="textEdit">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>561</width>
+       <height>451</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>450</y>
+       <width>461</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="sendButton">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>450</y>
+       <width>101</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Send</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

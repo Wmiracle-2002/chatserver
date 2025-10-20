@@ -18,7 +18,7 @@ ChatService::ChatService(){
     _msgHanderMap.insert({CREATE_GROUP_MSG, bind(&ChatService::createGroup, this, _1, _2, _3)});
     _msgHanderMap.insert({ADD_GROUP_MSG, bind(&ChatService::addGroup, this, _1, _2, _3)});
     _msgHanderMap.insert({GROUP_CHAT_MSG, bind(&ChatService::groupChat, this, _1, _2, _3)});
-
+    _msgHanderMap.insert({QUIT_GROUP_MSG, bind(&ChatService::quitGroup, this, _1, _2, _3)});
     // 连接redis服务器
     if(_redis.connect()){
         // 设置上报消息的回调
@@ -170,8 +170,40 @@ void ChatService::oneChat(const TcpConnectionPtr& conn, json& js, Timestamp time
 void ChatService::addFriend(const TcpConnectionPtr& conn, json& js, Timestamp time){
     int userid = js["id"];
     int friendid = js["friendid"];
+    json addMsgToA, addMsgToB;
+
+    // 查询friendid用户是否注册过
+    if(_userModel.query(*cp, friendid).getId() == -1){
+        addMsgToA["errno"] = 1;
+        addMsgToA["msgid"] = ADD_FRIEND_ACK;
+        conn->send(addMsgToA.dump());
+        return;
+    }
+
     // 存储好友信息
     _friendModel.insert(*cp, userid, friendid);
+    
+    addMsgToA["errno"] = 0;
+    addMsgToA["msgid"] = ADD_FRIEND_ACK;
+    // addMsgToA["id"] = userid;
+    addMsgToA["friendid"] = friendid;
+    addMsgToA["friendname"] = _userModel.query(*cp, friendid).getName();
+    
+    // 发送回加好友方
+    conn->send(addMsgToA.dump());
+
+    addMsgToB["errno"] = 0;
+    addMsgToB["msgid"] = ADD_FRIEND_ACK;
+    // addMsgToB["id"] = friendid;
+    addMsgToB["friendid"] = userid;
+    addMsgToB["friendname"] = _userModel.query(*cp, userid).getName();
+
+    // 查看好友是否在线并发送通知
+    auto it = _userConnectionMap.find(friendid);
+    if (it != _userConnectionMap.end()) {
+        // 发送给被加好友方
+        it->second->send(addMsgToB.dump());
+    }
 }
 
 // 删除好友业务
@@ -180,6 +212,18 @@ void ChatService::removeFriend(const TcpConnectionPtr& conn, json& js, Timestamp
     int friendid = js["friendid"];
     // 删除好友信息
     _friendModel.remove(*cp, userid, friendid);
+    // 向好友的客户端发送通知信息
+    json deleteMsg;
+    deleteMsg["errno"] = 0;
+    deleteMsg["msgid"] = FRIEND_DELETED_MSG;
+    deleteMsg["friendid"] = userid;
+    deleteMsg["deleted_by"] = userid;
+    
+    // 查看好友是否在线并发送通知
+    auto it = _userConnectionMap.find(friendid);
+    if (it != _userConnectionMap.end()) {
+        it->second->send(deleteMsg.dump());
+    }
 }
 
 // 创建群组业务
@@ -193,13 +237,38 @@ void ChatService::createGroup(const TcpConnectionPtr& conn, json& js, Timestamp 
         // 存储群组创建人信息
         _groupModel.addGroup(*cp, userid, group.getId(), "creator");
     }
+
+    json responsejs;
+    responsejs["errno"] = 0;
+    responsejs["msgid"] = CREATE_GROUP_ACK;
+    responsejs["groupid"] = group.getId();
+    responsejs["groupname"] = groupname;
+    responsejs["groupdesc"] = groupdesc;
+    conn->send(responsejs.dump());
 }
 
 // 加入群组业务
 void ChatService::addGroup(const TcpConnectionPtr& conn, json& js, Timestamp time){
     int userid = js["id"];
     int groupid = js["groupid"];
+    json responsejs;
+
+    // 查询groupid群组是否创建过
+    if(_groupModel.queryGroupInfo(*cp, groupid).getId() == -1){
+        responsejs["errno"] = 1;
+        responsejs["msgid"] = ADD_GROUP_ACK;
+        conn->send(responsejs.dump());
+        return;
+    }
+
     _groupModel.addGroup(*cp, userid, groupid, "normal");
+
+    responsejs["errno"] = 0;
+    responsejs["msgid"] = ADD_GROUP_ACK;
+    responsejs["groupid"] = groupid;
+    responsejs["groupname"] = _groupModel.queryGroupInfo(*cp, groupid).getName();
+    responsejs["groupdesc"] = _groupModel.queryGroupInfo(*cp, groupid).getDesc();
+    conn->send(responsejs.dump());
 }
 
 // 群聊天业务
@@ -241,6 +310,61 @@ void ChatService::logout(const TcpConnectionPtr& conn, json& js, Timestamp time)
     // 更新用户状态信息
     User user(userid, "", "", "offline");
     _userModel.updateState(*cp, user);
+}
+
+// 退出/解散群组业务
+void ChatService::quitGroup(const TcpConnectionPtr& conn, json& js, Timestamp time){
+    // cout << "开始解散/退出群组..." << endl;
+    int userid = js["id"];
+    int groupid = js["groupid"];
+    string userrole;
+    lock_guard<mutex> lock(_connMutex);
+    vector<GroupUser> users = _groupModel.queryGroupInfo(*cp, groupid).getUsers();
+    vector<string> userStrings;
+    // cout << users.size() << endl;
+    for(GroupUser guser : users){
+        json userjs;
+        userjs["userid"] = guser.getId();
+        userjs["username"] = guser.getName();
+        userjs["role"] = guser.getRole();
+        userjs["state"] = guser.getState();
+        userStrings.push_back(userjs.dump());
+        // cout << userjs["userid"] << " " << userid << endl;
+        if(userjs["userid"] == userid){
+            userrole = userjs["role"];
+        }
+    }
+    if(userrole == "creator"){
+        _groupModel.dissolveGroup(*cp, groupid);
+        // 向所有群成员发送群组解散通知
+        json dissolveMsg;
+        dissolveMsg["msgid"] = GROUP_DISSOLVED_MSG;
+        dissolveMsg["groupid"] = groupid;
+        dissolveMsg["dismissed_by"] = userid;
+        
+        for (GroupUser guser : users) {
+            if (guser.getId() != userid) { // 不发给解散者自己
+                // 查找在线成员并发送通知
+                auto it = _userConnectionMap.find(guser.getId());
+                if (it != _userConnectionMap.end()) {
+                    it->second->send(dissolveMsg.dump());
+                } else {
+                    // 离线成员可以存储离线消息
+                    _offlineMsgModel.insert(*cp, guser.getId(), dissolveMsg.dump());
+                }
+            }
+        }
+    }
+    else{
+        _groupModel.quitGroup(*cp, userid, groupid);
+    }
+    json responsejs;
+    responsejs["id"] = userid;
+    responsejs["groupid"] = groupid;
+    responsejs["errno"] = 0;
+    responsejs["msgid"] = QUIT_GROUP_ACK;
+    responsejs["users"] = userStrings;
+    conn->send(responsejs.dump());
 }
 
 // 获取消息对应的处理器

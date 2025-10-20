@@ -22,6 +22,59 @@ void GroupModel::addGroup(ConnectionPool &cp, int userid, int groupid, string ro
     mysql->update(sql);
 }
 
+// 退出群组
+void GroupModel::quitGroup(ConnectionPool &cp, int userid, int groupid){
+    // 组装sql语句
+    char sql[1024] = {0};
+    sprintf(sql, "delete from GroupUser where groupid = %d and userid = %d", groupid, userid);
+    shared_ptr<MysqlConn> mysql = cp.getConnection();
+    mysql->update(sql);
+}
+
+// 解散群组
+void GroupModel::dissolveGroup(ConnectionPool &cp, int groupid){
+    // 组装sql语句
+    char sql[1024] = {0};
+    char sql2[1024] = {0};
+    sprintf(sql, "delete from AllGroup where id = %d", groupid);
+    sprintf(sql2, "delete from GroupUser where groupid = %d", groupid);
+    shared_ptr<MysqlConn> mysql = cp.getConnection();
+    mysql->update(sql);
+    mysql->update(sql2);
+}
+
+// 根据groupid查询该群组信息
+Group GroupModel::queryGroupInfo(ConnectionPool &cp, int groupid){
+    char sql[1024] = {0};
+    sprintf(sql, "select * from AllGroup where id = %d", groupid);
+    shared_ptr<MysqlConn> mysql = cp.getConnection();
+    Group group;
+    if(mysql->query(sql)){
+        mysql->next();  // 重点：没调用next()的话是指向第一行的前一行
+        MYSQL_ROW row = mysql->getRow();
+        if(row != nullptr){
+            group.setId(groupid);
+            group.setName(row[1]);
+            group.setDesc(row[2]);
+        }
+    }
+    sprintf(sql, "select a.id,a.name,a.state,b.grouprole from User a inner join GroupUser b on b.userid = a.id where b.groupid = %d", group.getId());
+    if(mysql->query(sql)){
+        while(mysql->next()){
+            MYSQL_ROW row = mysql->getRow();
+            if(row != nullptr){
+                GroupUser user;
+                user.setId(atoi(row[0]));
+                user.setName(row[1]);
+                user.setState(row[2]);
+                user.setRole(row[3]);
+                group.getUsers().push_back(user);
+            }
+        }
+    }
+    return group;
+}
+
 // 查询用户所在群组信息
 vector<Group> GroupModel::queryGroups(ConnectionPool &cp, int userid){
     // 先根据userid在groupuser表中查询出该用户所属的群组信息

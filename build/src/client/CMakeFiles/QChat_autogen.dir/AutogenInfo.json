@@ -1,0 +1,98 @@
+{
+	"BUILD_DIR" : "/home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen",
+	"CMAKE_BINARY_DIR" : "/home/wmiracle/Codes/chatserver/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/wmiracle/Codes/chatserver/build/src/client",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/wmiracle/Codes/chatserver/src/client",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_SOURCE_DIR" : "/home/wmiracle/Codes/chatserver",
+	"HEADERS" : 
+	[
+		[
+			"/home/wmiracle/Codes/chatserver/include/client/clientcore.h",
+			"MU",
+			"V52LERMGDR/moc_clientcore.cpp"
+		],
+		[
+			"/home/wmiracle/Codes/chatserver/include/client/loginwidget.h",
+			"MU",
+			"V52LERMGDR/moc_loginwidget.cpp"
+		],
+		[
+			"/home/wmiracle/Codes/chatserver/include/client/mainchatwindow.h",
+			"MU",
+			"V52LERMGDR/moc_mainchatwindow.cpp"
+		],
+		[
+			"/home/wmiracle/Codes/chatserver/include/client/registerwidget.h",
+			"MU",
+			"V52LERMGDR/moc_registerwidget.cpp"
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/wmiracle/Codes/chatserver/include",
+		"/home/wmiracle/Codes/chatserver/include/server",
+		"/home/wmiracle/Codes/chatserver/include/server/db",
+		"/home/wmiracle/Codes/chatserver/include/server/model",
+		"/home/wmiracle/Codes/chatserver/include/server/redis",
+		"/home/wmiracle/Codes/chatserver/include/client",
+		"/home/wmiracle/Codes/chatserver/thirdparty",
+		"/home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore",
+		"/home/wmiracle/Qt/6.8.3/gcc_64/include",
+		"/home/wmiracle/Qt/6.8.3/gcc_64/mkspecs/linux-g++",
+		"/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets",
+		"/home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui",
+		"/usr/include",
+		"/usr/include/c++/9",
+		"/usr/include/x86_64-linux-gnu/c++/9",
+		"/usr/include/c++/9/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/9/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_GADGET_EXPORT", "Q_ENUM_NS" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : true,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "/home/wmiracle/Codes/chatserver/build/src/client/CMakeFiles/QChat_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/home/wmiracle/Qt/6.8.3/gcc_64/libexec/moc",
+	"QT_UIC_EXECUTABLE" : "/home/wmiracle/Qt/6.8.3/gcc_64/libexec/uic",
+	"QT_VERSION_MAJOR" : 6,
+	"SETTINGS_FILE" : "/home/wmiracle/Codes/chatserver/build/src/client/CMakeFiles/QChat_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[ "/home/wmiracle/Codes/chatserver/src/client/clientcore.cpp", "MU" ],
+		[ "/home/wmiracle/Codes/chatserver/src/client/loginwidget.cpp", "MU" ],
+		[ "/home/wmiracle/Codes/chatserver/src/client/main.cpp", "MU" ],
+		[ "/home/wmiracle/Codes/chatserver/src/client/mainchatwindow.cpp", "MU" ],
+		[ "/home/wmiracle/Codes/chatserver/src/client/registerwidget.cpp", "MU" ]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}

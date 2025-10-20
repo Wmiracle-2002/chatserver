@@ -16,15 +16,22 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
+#include "loginwidget.h"
+#include "clientcore.h"
+#include "mainchatwindow.h"
+#include <QApplication>
+#include <QLocale>
+#include <QTranslator>
+
 using namespace std;
 using json = nlohmann::json;
 
-User g_currentUser; // 记录当前系统登录的用户信息
-vector<User> g_currentUserFriendList;   // 记录当前登录用户的好友列表信息
-vector<Group> g_currentUserGroupList;   // 记录当前登录用户的群组列表信息
-bool isMainMenuRunning = false; // 控制主菜单页面程序
-sem_t rwsem;    // 用于读写线程之间的通信
-atomic_bool g_isLoginSuccess{false};    // 记录登录状态
+// User g_currentUser; // 记录当前系统登录的用户信息
+// vector<User> g_currentUserFriendList;   // 记录当前登录用户的好友列表信息
+// vector<Group> g_currentUserGroupList;   // 记录当前登录用户的群组列表信息
+// bool isMainMenuRunning = false; // 控制主菜单页面程序
+// sem_t rwsem;    // 用于读写线程之间的通信
+// atomic_bool g_isLoginSuccess{false};    // 记录登录状态
 
 // "help" command handler
 void help(int fd = 0, string str = "");
@@ -42,7 +49,7 @@ void addgroup(int, string);
 void groupchat(int, string);
 // "logout" command handler
 void logout(int, string);
-
+#if 0
 // 系统支持的客户端命令列表
 unordered_map<string, string> commandMap = {
     {"help", "显示所有支持的命令，格式help"},
@@ -240,7 +247,8 @@ void mainMenu(int clientfd){
         it->second(clientfd, commandbuf.substr(idx + 1, commandbuf.size() - idx)); // 调用命令处理方法
     }
 }
-
+#endif
+#if 0
 // 聊天客户端程序实现，main线程用作发送线程，子线程用作接收线程
 int main(int argc, char **argv){
     if(argc < 3){
@@ -359,6 +367,52 @@ int main(int argc, char **argv){
     }
 }
 
+#else
+// main.cpp
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    QTranslator translator;
+    const QStringList uiLanguages = QLocale::system().uiLanguages();
+    for (const QString &locale : uiLanguages) {
+        const QString baseName = "QChat_" + QLocale(locale).name();
+        if (translator.load(":/i18n/" + baseName)) {
+            a.installTranslator(&translator);
+            break;
+        }
+    }
+    
+    // 创建核心网络组件
+    ClientCore *clientCore = new ClientCore;
+    clientCore->connectToServer("127.0.0.1", 8000);
+    // 创建登录界面，传入核心网络对象
+    LoginWidget loginWidget(clientCore);
+    loginWidget.show();
+
+    // 连接登录成功信号
+    QObject::connect(&loginWidget, &LoginWidget::loginSuccess, [&](const json &js) {
+        // TODO: 这里可以打开主聊天界面
+        std::cout << "Login successful! Opening main window..." << std::endl;
+        
+        MainChatWindow* mWindow = new MainChatWindow(clientCore);
+        
+        // for(User &u : clientCore->g_currentUserFriendList)
+        // {
+        //     QString id = QString::number(u.getId());
+        //     QString name = QString::fromStdString(u.getName());
+        //     mWindow->addFriend(id, name);
+        // }
+        
+        mWindow->show();
+        clientCore->doLoginResponse(js);
+        mWindow->fillFriendList();
+    });
+    
+    return a.exec();
+}
+
+#endif
+#if 0
 // 帮助命令
 void help(int, string){
     cout << "show command list >>> " << endl;
@@ -502,3 +556,4 @@ void logout(int clientfd, string){
         isMainMenuRunning = false;
     }
 }
+#endif

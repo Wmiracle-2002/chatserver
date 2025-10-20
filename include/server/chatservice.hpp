@@ -49,6 +49,8 @@ public:
     void groupChat(const TcpConnectionPtr& conn, json& js, Timestamp time);
     // 处理注销业务
     void logout(const TcpConnectionPtr& conn, json& js, Timestamp time);
+    // 退出/解散群组业务
+    void quitGroup(const TcpConnectionPtr& conn, json& js, Timestamp time);
     // 获取消息对应的处理器
     MsgHandler getHandler(int msgid);
     // 从reids消息队列中获取订阅的消息
