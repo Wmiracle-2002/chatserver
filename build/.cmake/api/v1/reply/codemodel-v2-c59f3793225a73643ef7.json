@@ -13,7 +13,7 @@
 					"hasInstallRule" : true,
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.0"
+						"string" : "3.10"
 					},
 					"projectIndex" : 0,
 					"source" : "."
@@ -28,7 +28,7 @@
 					"hasInstallRule" : true,
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.0"
+						"string" : "3.10"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,
@@ -38,7 +38,7 @@
 					"build" : "src/server",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.0"
+						"string" : "3.10"
 					},
 					"parentIndex" : 1,
 					"projectIndex" : 0,
@@ -65,7 +65,7 @@
 					]
 				}
 			],
-			"name" : "",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -90,21 +90,21 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "ChatServer::@2804e40980a64c7d7ad1",
-					"jsonFile" : "target-ChatServer-5c8a71c75e173b0d56f9.json",
+					"jsonFile" : "target-ChatServer-Debug-a91b769ce778612acac6.json",
 					"name" : "ChatServer",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "QChat::@8ca63c80a879d0067daa",
-					"jsonFile" : "target-QChat-40d413ec551bcea52089.json",
+					"jsonFile" : "target-QChat-Debug-2384ae968982d81fd3a0.json",
 					"name" : "QChat",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "QChat_autogen::@8ca63c80a879d0067daa",
-					"jsonFile" : "target-QChat_autogen-c3148b2d49e20db07a54.json",
+					"jsonFile" : "target-QChat_autogen-Debug-c3148b2d49e20db07a54.json",
 					"name" : "QChat_autogen",
 					"projectIndex" : 0
 				}

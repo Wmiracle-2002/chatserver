@@ -60,28 +60,28 @@ include CMakeFiles/staticLib.dir/flags.make
 CMakeFiles/staticLib.dir/staticlib1.cpp.o: CMakeFiles/staticLib.dir/flags.make
 CMakeFiles/staticLib.dir/staticlib1.cpp.o: /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib1.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmiracle/Codes/chatserver/build/src/client/config.tests/static_link_order/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/staticLib.dir/staticlib1.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/staticLib.dir/staticlib1.cpp.o -c /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib1.cpp
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/staticLib.dir/staticlib1.cpp.o -c /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib1.cpp
 
 CMakeFiles/staticLib.dir/staticlib1.cpp.i: cmake_force
 	@echo "Preprocessing CXX source to CMakeFiles/staticLib.dir/staticlib1.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib1.cpp > CMakeFiles/staticLib.dir/staticlib1.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib1.cpp > CMakeFiles/staticLib.dir/staticlib1.cpp.i
 
 CMakeFiles/staticLib.dir/staticlib1.cpp.s: cmake_force
 	@echo "Compiling CXX source to assembly CMakeFiles/staticLib.dir/staticlib1.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib1.cpp -o CMakeFiles/staticLib.dir/staticlib1.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib1.cpp -o CMakeFiles/staticLib.dir/staticlib1.cpp.s
 
 CMakeFiles/staticLib.dir/staticlib2.cpp.o: CMakeFiles/staticLib.dir/flags.make
 CMakeFiles/staticLib.dir/staticlib2.cpp.o: /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib2.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmiracle/Codes/chatserver/build/src/client/config.tests/static_link_order/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/staticLib.dir/staticlib2.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/staticLib.dir/staticlib2.cpp.o -c /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib2.cpp
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/staticLib.dir/staticlib2.cpp.o -c /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib2.cpp
 
 CMakeFiles/staticLib.dir/staticlib2.cpp.i: cmake_force
 	@echo "Preprocessing CXX source to CMakeFiles/staticLib.dir/staticlib2.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib2.cpp > CMakeFiles/staticLib.dir/staticlib2.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib2.cpp > CMakeFiles/staticLib.dir/staticlib2.cpp.i
 
 CMakeFiles/staticLib.dir/staticlib2.cpp.s: cmake_force
 	@echo "Compiling CXX source to assembly CMakeFiles/staticLib.dir/staticlib2.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib2.cpp -o CMakeFiles/staticLib.dir/staticlib2.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib2.cpp -o CMakeFiles/staticLib.dir/staticlib2.cpp.s
 
 # Object files for target staticLib
 staticLib_OBJECTS = \

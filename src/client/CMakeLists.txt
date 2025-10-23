@@ -3,11 +3,17 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-set(CMAKE_PREFIX_PATH "/home/wmiracle/Qt/6.8.3/gcc_64")
+if(WIN32)
+    set(CMAKE_PREFIX_PATH "E:/Qt/6.8.3/msvc2022_64")
+else()
+    # 本地 Linux 编译
+    set(CMAKE_PREFIX_PATH "/home/wmiracle/Qt/6.8.3/gcc_64")
+endif()
 
 # 查找Qt包
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
+find_package(Qt6 REQUIRED COMPONENTS Core Widgets Network)
 
 # 设置翻译源文件
 set(TS_FILES QChat_zh_CN.ts)
@@ -83,7 +89,16 @@ elseif(APPLE)
 endif()
 
 # 链接Qt库
-target_link_libraries(QChat PRIVATE Qt${QT_VERSION_MAJOR}::Widgets pthread)
+# target_link_libraries(QChat PRIVATE Qt${QT_VERSION_MAJOR}::Widgets pthread)
+
+# 链接Qt库 - 确保包含Network
+target_link_libraries(QChat PRIVATE
+    Qt${QT_VERSION_MAJOR}::Widgets pthread
+    Qt${QT_VERSION_MAJOR}::Core 
+    Qt${QT_VERSION_MAJOR}::Widgets 
+    Qt${QT_VERSION_MAJOR}::Network  # 关键：添加Network模块
+    pthread
+)
 
 # 设置目标属性
 if(${QT_VERSION} VERSION_LESS 6.1.0)

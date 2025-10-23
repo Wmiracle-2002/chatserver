@@ -1,8 +1,5 @@
 #include "mainchatwindow.h"
 #include "ui_mainchatwindow.h"
-#include "friendmodel.hpp"
-#include "user.hpp"
-#include "usermodel.hpp"
 #include <ctime>
 #include <chrono>
 #include <iostream>

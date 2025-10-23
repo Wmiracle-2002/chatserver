@@ -6,6 +6,34 @@
 #include <chrono>
 #include <QMetaObject>
 
+#ifdef _WIN32
+bool ClientCore::s_wsaInitialized = false;
+
+void ClientCore::initWSA()
+{
+    if (!s_wsaInitialized) {
+        WSADATA wsaData;
+        if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
+            qWarning() << "WSAStartup failed";
+            return;
+        }
+        s_wsaInitialized = true;
+    }
+}
+#endif
+
+void ClientCore::closeSocket()
+{
+    if (m_clientfd != -1) {
+#ifdef _WIN32
+        closesocket(m_clientfd);
+#else
+        close(m_clientfd);
+#endif
+        m_clientfd = -1;
+    }
+}
+
 // 处理登陆响应业务逻辑
 void ClientCore::doLoginResponse(const json &responsejs){
     if(0 != responsejs["errno"].get<int>()){
@@ -219,14 +247,16 @@ void ClientCore::doDissolveGroupResponse(const json &responsejs){
     emit groupInfo("information", "解散群组成功", "该群组信息已清除");
 }
 
-ClientCore::ClientCore(QObject *parent) : QObject(parent) {}
+ClientCore::ClientCore(QObject *parent) : QObject(parent) 
+{
+#ifdef _WIN32
+    initWSA();
+#endif
+}
 
 ClientCore::~ClientCore()
 {
-    if (m_clientfd != -1) {
-        close(m_clientfd);
-        m_clientfd = -1;
-    }
+    closeSocket();
     
     if (m_readThread && m_readThread->isRunning()) {
         m_running = false;
@@ -234,6 +264,13 @@ ClientCore::~ClientCore()
         m_readThread->wait();
         delete m_readThread;
     }
+    
+#ifdef _WIN32
+    if (s_wsaInitialized) {
+        WSACleanup();
+        s_wsaInitialized = false;
+    }
+#endif
 }
 
 bool ClientCore::connectToServer(const QString &ip, quint16 port)
@@ -242,7 +279,12 @@ bool ClientCore::connectToServer(const QString &ip, quint16 port)
         return true; // 已经连接
     }
 
+#ifdef _WIN32
+    m_clientfd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+#else
     m_clientfd = socket(AF_INET, SOCK_STREAM, 0);
+#endif
+
     if (m_clientfd == -1) {
         qWarning() << "Socket creation error";
         return false;
@@ -251,14 +293,28 @@ bool ClientCore::connectToServer(const QString &ip, quint16 port)
     sockaddr_in serverAddr;
     serverAddr.sin_family = AF_INET;
     serverAddr.sin_port = htons(port);
+    
+#ifdef _WIN32
+    InetPtonA(AF_INET, ip.toStdString().c_str(), &serverAddr.sin_addr);
+#else
     serverAddr.sin_addr.s_addr = inet_addr(ip.toStdString().c_str());
+#endif
 
+#ifdef _WIN32
+    if (::connect(m_clientfd, (sockaddr*)&serverAddr, sizeof(serverAddr)) == SOCKET_ERROR) {
+        qWarning() << "Connection failed, error:" << WSAGetLastError();
+        closesocket(m_clientfd);
+        m_clientfd = -1;
+        return false;
+    }
+#else
     if (::connect(m_clientfd, (sockaddr*)&serverAddr, sizeof(serverAddr)) == -1) {
         qWarning() << "Connection failed";
         close(m_clientfd);
         m_clientfd = -1;
         return false;
     }
+#endif
 
     m_running = true;
     m_readThread = QThread::create([this] { readTaskHandler(); });
@@ -271,11 +327,20 @@ void ClientCore::readTaskHandler()
 {
     while (m_running) {
         char buffer[4096] = {0};
+        
+#ifdef _WIN32
+        int len = recv(m_clientfd, buffer, sizeof(buffer), 0);
+        if (len == SOCKET_ERROR || len == 0) {
+            emit loginFailed("Connection lost");
+            break;
+        }
+#else
         int len = recv(m_clientfd, buffer, sizeof(buffer), 0);
         if (len <= 0) {
             emit loginFailed("Connection lost");
             break;
         }
+#endif
 
         try {
             json js = json::parse(buffer);
@@ -347,9 +412,16 @@ void ClientCore::sendJson(const json &js)
     }
     
     std::string buffer = js.dump();
+    
+#ifdef _WIN32
+    if (send(m_clientfd, buffer.c_str(), buffer.size(), 0) == SOCKET_ERROR) {
+        emit loginFailed("Failed to send data");
+    }
+#else
     if (send(m_clientfd, buffer.c_str(), buffer.size(), 0) == -1) {
         emit loginFailed("Failed to send data");
     }
+#endif
     cout << buffer << endl;
 }
 
@@ -374,11 +446,21 @@ void ClientCore::registerUser(const QString &name, const QString &password)
 json ClientCore::getRegSuccessMsg()
 {
     char buffer[1024] = {0};
-    int len = recv(m_clientfd, buffer, 1024, 0);  // 阻塞了
-    if (-1 == len || 0 == len){
-        close(m_clientfd);
+    
+#ifdef _WIN32
+    int len = recv(m_clientfd, buffer, 1024, 0);
+    if (len == SOCKET_ERROR || len == 0){
+        closeSocket();
         exit(-1);
     }
+#else
+    int len = recv(m_clientfd, buffer, 1024, 0);
+    if (-1 == len || 0 == len){
+        closeSocket();
+        exit(-1);
+    }
+#endif
+
     // 接收ChatServer转发的数据，反序列化生成json数据对象
     json js = json::parse(buffer);
     return js;

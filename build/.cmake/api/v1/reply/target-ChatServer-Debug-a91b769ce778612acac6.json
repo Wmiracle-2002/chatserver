@@ -35,24 +35,6 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 21,
-				"parent" : 2
-			},
-			{
-				"command" : 1,
-				"file" : 1,
-				"line" : 22,
-				"parent" : 2
-			},
-			{
-				"command" : 1,
-				"file" : 1,
-				"line" : 23,
-				"parent" : 2
-			},
-			{
-				"command" : 1,
-				"file" : 1,
 				"line" : 24,
 				"parent" : 2
 			},
@@ -71,7 +53,31 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 27,
+				"line" : 32,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 33,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 34,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 35,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 39,
 				"parent" : 2
 			}
 		]
@@ -82,7 +88,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : " "
+					"fragment" : "-g  "
 				},
 				{
 					"fragment" : "-std=gnu++17"
@@ -96,27 +102,31 @@
 				},
 				{
 					"backtrace" : 4,
-					"path" : "/home/wmiracle/Codes/chatserver/include/server"
+					"path" : "/home/wmiracle/Codes/chatserver/include/common"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "/home/wmiracle/Codes/chatserver/include/server/db"
+					"path" : "/home/wmiracle/Codes/chatserver/thirdparty"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "/home/wmiracle/Codes/chatserver/include/server/model"
+					"path" : "/home/wmiracle/Codes/chatserver/include/server"
 				},
 				{
 					"backtrace" : 7,
-					"path" : "/home/wmiracle/Codes/chatserver/include/server/redis"
+					"path" : "/home/wmiracle/Codes/chatserver/include/server/db"
 				},
 				{
 					"backtrace" : 8,
-					"path" : "/home/wmiracle/Codes/chatserver/include/client"
+					"path" : "/home/wmiracle/Codes/chatserver/include/server/model"
 				},
 				{
 					"backtrace" : 9,
-					"path" : "/home/wmiracle/Codes/chatserver/thirdparty"
+					"path" : "/home/wmiracle/Codes/chatserver/include/server/redis"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/home/wmiracle/Codes/chatserver/include/client"
 				}
 			],
 			"language" : "CXX",
@@ -141,7 +151,11 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-rdynamic",
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
 				"role" : "flags"
 			},
 			{

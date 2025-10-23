@@ -13,13 +13,14 @@ void resetHandler(int){
 }
 
 int main(int argc, char *argv[]){
-    if(argc < 3){
-        cerr << "command invalid! example: ./ChatServer 127.0.0.1 6000" << endl;
-        exit(-1);
-    }
-    char *ip = argv[1];
-    uint16_t port = atoi(argv[2]);
-
+    // if(argc < 3){
+    //     cerr << "command invalid! example: ./ChatServer 127.0.0.1 6000" << endl;
+    //     exit(-1);
+    // }
+    // char *ip = argv[1];
+    // uint16_t port = atoi(argv[2]);
+    char *ip = "0.0.0.0";
+    uint16_t port = 8000;
     signal(SIGINT, resetHandler);
 
     EventLoop loop;

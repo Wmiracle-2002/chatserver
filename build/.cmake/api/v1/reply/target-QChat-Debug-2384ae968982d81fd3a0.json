@@ -32,7 +32,7 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 44,
+				"line" : 50,
 				"parent" : 0
 			},
 			{
@@ -56,13 +56,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 102,
+				"line" : 117,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 86,
+				"line" : 95,
 				"parent" : 0
 			},
 			{
@@ -73,24 +73,6 @@
 			},
 			{
 				"file" : 2
-			},
-			{
-				"command" : 6,
-				"file" : 2,
-				"line" : 21,
-				"parent" : 8
-			},
-			{
-				"command" : 6,
-				"file" : 2,
-				"line" : 22,
-				"parent" : 8
-			},
-			{
-				"command" : 6,
-				"file" : 2,
-				"line" : 23,
-				"parent" : 8
 			},
 			{
 				"command" : 6,
@@ -113,7 +95,31 @@
 			{
 				"command" : 6,
 				"file" : 2,
-				"line" : 27,
+				"line" : 32,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 33,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 34,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 35,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 39,
 				"parent" : 8
 			}
 		]
@@ -124,7 +130,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : " "
+					"fragment" : "-g  "
 				},
 				{
 					"backtrace" : 7,
@@ -149,8 +155,8 @@
 					"define" : "QT_GUI_LIB"
 				},
 				{
-					"backtrace" : 7,
-					"define" : "QT_NO_DEBUG"
+					"backtrace" : 6,
+					"define" : "QT_NETWORK_LIB"
 				},
 				{
 					"backtrace" : 6,
@@ -169,27 +175,31 @@
 				},
 				{
 					"backtrace" : 10,
-					"path" : "/home/wmiracle/Codes/chatserver/include/server"
+					"path" : "/home/wmiracle/Codes/chatserver/include/common"
 				},
 				{
 					"backtrace" : 11,
-					"path" : "/home/wmiracle/Codes/chatserver/include/server/db"
+					"path" : "/home/wmiracle/Codes/chatserver/thirdparty"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "/home/wmiracle/Codes/chatserver/include/server/model"
+					"path" : "/home/wmiracle/Codes/chatserver/include/server"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "/home/wmiracle/Codes/chatserver/include/server/redis"
+					"path" : "/home/wmiracle/Codes/chatserver/include/server/db"
 				},
 				{
 					"backtrace" : 14,
-					"path" : "/home/wmiracle/Codes/chatserver/include/client"
+					"path" : "/home/wmiracle/Codes/chatserver/include/server/model"
 				},
 				{
 					"backtrace" : 15,
-					"path" : "/home/wmiracle/Codes/chatserver/thirdparty"
+					"path" : "/home/wmiracle/Codes/chatserver/include/server/redis"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/home/wmiracle/Codes/chatserver/include/client"
 				},
 				{
 					"backtrace" : 7,
@@ -215,6 +225,11 @@
 					"backtrace" : 6,
 					"isSystem" : true,
 					"path" : "/home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "/home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork"
 				}
 			],
 			"language" : "CXX",
@@ -256,6 +271,10 @@
 		"commandFragments" : 
 		[
 			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
 				"fragment" : "",
 				"role" : "flags"
 			},
@@ -264,8 +283,17 @@
 				"role" : "libraries"
 			},
 			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
 				"backtrace" : 6,
 				"fragment" : "/home/wmiracle/Qt/6.8.3/gcc_64/lib/libQt6Widgets.so.6.8.3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/home/wmiracle/Qt/6.8.3/gcc_64/lib/libQt6Network.so.6.8.3",
 				"role" : "libraries"
 			},
 			{

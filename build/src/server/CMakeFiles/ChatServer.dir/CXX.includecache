@@ -6,7 +6,21 @@
 
 #IncludeRegexTransform: 
 
-../include/public.hpp
+../include/common/group.hpp
+string
+-
+vector
+-
+groupuser.hpp
+../include/common/groupuser.hpp
+
+../include/common/groupuser.hpp
+user.hpp
+../include/common/user.hpp
+
+../include/common/user.hpp
+string
+-
 
 ../include/server/chatserver.hpp
 muduo/net/TcpServer.h
@@ -82,14 +96,6 @@ vector
 connpool.h
 ../include/server/model/connpool.h
 
-../include/server/model/group.hpp
-string
--
-vector
--
-groupuser.hpp
-../include/server/model/groupuser.hpp
-
 ../include/server/model/groupmodel.hpp
 string
 -
@@ -100,10 +106,6 @@ group.hpp
 connpool.h
 ../include/server/model/connpool.h
 
-../include/server/model/groupuser.hpp
-user.hpp
-../include/server/model/user.hpp
-
 ../include/server/model/offlinemsgmodel.hpp
 string
 -
@@ -111,10 +113,6 @@ vector
 -
 connpool.h
 ../include/server/model/connpool.h
-
-../include/server/model/user.hpp
-string
--
 
 ../include/server/model/usermodel.hpp
 user.hpp
@@ -462,34 +460,6 @@ limits
 type_traits
 -
 
-/home/wmiracle/Codes/chatserver/src/server/chatserver.cpp
-chatserver.hpp
-/home/wmiracle/Codes/chatserver/src/server/chatserver.hpp
-chatservice.hpp
-/home/wmiracle/Codes/chatserver/src/server/chatservice.hpp
-json.hpp
-/home/wmiracle/Codes/chatserver/src/server/json.hpp
-iostream
--
-
-/home/wmiracle/Codes/chatserver/src/server/chatservice.cpp
-chatservice.hpp
-/home/wmiracle/Codes/chatserver/src/server/chatservice.hpp
-public.hpp
-/home/wmiracle/Codes/chatserver/src/server/public.hpp
-
-/home/wmiracle/Codes/chatserver/src/server/db/connpool.cpp
-connpool.h
-/home/wmiracle/Codes/chatserver/src/server/db/connpool.h
-iostream
--
-
-/home/wmiracle/Codes/chatserver/src/server/db/mysqlconn.cpp
-mysqlconn.h
-/home/wmiracle/Codes/chatserver/src/server/db/mysqlconn.h
-iostream
--
-
 /home/wmiracle/Codes/chatserver/src/server/main.cpp
 chatserver.hpp
 /home/wmiracle/Codes/chatserver/src/server/chatserver.hpp
@@ -500,27 +470,5 @@ connpool.h
 iostream
 -
 signal.h
--
-
-/home/wmiracle/Codes/chatserver/src/server/model/friendmodel.cpp
-friendmodel.hpp
-/home/wmiracle/Codes/chatserver/src/server/model/friendmodel.hpp
-
-/home/wmiracle/Codes/chatserver/src/server/model/groupmodel.cpp
-groupmodel.hpp
-/home/wmiracle/Codes/chatserver/src/server/model/groupmodel.hpp
-
-/home/wmiracle/Codes/chatserver/src/server/model/offlinemsgmodel.cpp
-offlinemsgmodel.hpp
-/home/wmiracle/Codes/chatserver/src/server/model/offlinemsgmodel.hpp
-
-/home/wmiracle/Codes/chatserver/src/server/model/usermodel.cpp
-usermodel.hpp
-/home/wmiracle/Codes/chatserver/src/server/model/usermodel.hpp
-
-/home/wmiracle/Codes/chatserver/src/server/redis/redis.cpp
-redis.hpp
-/home/wmiracle/Codes/chatserver/src/server/redis/redis.hpp
-iostream
 -
 

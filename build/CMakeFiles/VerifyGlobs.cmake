@@ -122,15 +122,15 @@ endif()
 # _directory_contents at /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:55 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/wmiracle/Codes/chatserver/*.hpp")
 set(OLD_GLOB
-  "/home/wmiracle/Codes/chatserver/include/public.hpp"
+  "/home/wmiracle/Codes/chatserver/include/common/group.hpp"
+  "/home/wmiracle/Codes/chatserver/include/common/groupuser.hpp"
+  "/home/wmiracle/Codes/chatserver/include/common/public.hpp"
+  "/home/wmiracle/Codes/chatserver/include/common/user.hpp"
   "/home/wmiracle/Codes/chatserver/include/server/chatserver.hpp"
   "/home/wmiracle/Codes/chatserver/include/server/chatservice.hpp"
   "/home/wmiracle/Codes/chatserver/include/server/model/friendmodel.hpp"
-  "/home/wmiracle/Codes/chatserver/include/server/model/group.hpp"
   "/home/wmiracle/Codes/chatserver/include/server/model/groupmodel.hpp"
-  "/home/wmiracle/Codes/chatserver/include/server/model/groupuser.hpp"
   "/home/wmiracle/Codes/chatserver/include/server/model/offlinemsgmodel.hpp"
-  "/home/wmiracle/Codes/chatserver/include/server/model/user.hpp"
   "/home/wmiracle/Codes/chatserver/include/server/model/usermodel.hpp"
   "/home/wmiracle/Codes/chatserver/include/server/redis/redis.hpp"
   "/home/wmiracle/Codes/chatserver/test/testjson/json.hpp"

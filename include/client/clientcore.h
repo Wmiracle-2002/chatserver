@@ -4,14 +4,25 @@
 #include <QObject>
 #include <QThread>
 #include <atomic>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-#include <unistd.h>
 #include "public.hpp"
 #include "user.hpp"
 #include "group.hpp"
 #include "json.hpp"
+
+// 平台相关的网络头文件
+#ifdef _WIN32
+    // 在包含Windows头文件之前定义这些宏来避免命名冲突
+    #define NOMINMAX  // 避免min/max宏
+    #define WIN32_LEAN_AND_MEAN  // 减少Windows头文件包含
+    #include <winsock2.h>
+    #include <ws2tcpip.h>
+    #pragma comment(lib, "ws2_32.lib")
+#else
+    #include <sys/socket.h>
+    #include <netinet/in.h>
+    #include <arpa/inet.h>
+    #include <unistd.h>
+#endif
 
 using json = nlohmann::json;
 
@@ -62,10 +73,16 @@ signals:
     void groupInfo(const QString& type, const QString& title, const QString& msg);
 private:
     void readTaskHandler();
+    void closeSocket();
 
     int m_clientfd = -1;
     std::atomic_bool m_running{false};
     QThread* m_readThread = nullptr;
+    
+#ifdef _WIN32
+    static bool s_wsaInitialized;
+    static void initWSA();
+#endif
 };
 
 #endif // CLIENTCORE_H

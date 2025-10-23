@@ -6,10 +6,10 @@ src/client/CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.o
  ../include/client/loginwidget.h
  ../include/client/mainchatwindow.h
  ../include/client/registerwidget.h
- ../include/public.hpp
- ../include/server/model/group.hpp
- ../include/server/model/groupuser.hpp
- ../include/server/model/user.hpp
+ ../include/common/group.hpp
+ ../include/common/groupuser.hpp
+ ../include/common/public.hpp
+ ../include/common/user.hpp
  ../thirdparty/json.hpp
  /home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/V52LERMGDR/moc_clientcore.cpp
  /home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/V52LERMGDR/moc_loginwidget.cpp
@@ -230,10 +230,10 @@ src/client/CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qwidget.h
 src/client/CMakeFiles/QChat.dir/clientcore.cpp.o
  ../include/client/clientcore.h
- ../include/public.hpp
- ../include/server/model/group.hpp
- ../include/server/model/groupuser.hpp
- ../include/server/model/user.hpp
+ ../include/common/group.hpp
+ ../include/common/groupuser.hpp
+ ../include/common/public.hpp
+ ../include/common/user.hpp
  ../thirdparty/json.hpp
  /home/wmiracle/Codes/chatserver/src/client/clientcore.cpp
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QDebug
@@ -436,10 +436,10 @@ src/client/CMakeFiles/QChat.dir/loginwidget.cpp.o
  ../include/client/loginwidget.h
  ../include/client/mainchatwindow.h
  ../include/client/registerwidget.h
- ../include/public.hpp
- ../include/server/model/group.hpp
- ../include/server/model/groupuser.hpp
- ../include/server/model/user.hpp
+ ../include/common/group.hpp
+ ../include/common/groupuser.hpp
+ ../include/common/public.hpp
+ ../include/common/user.hpp
  ../thirdparty/json.hpp
  /home/wmiracle/Codes/chatserver/src/client/loginwidget.cpp
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QList
@@ -691,10 +691,10 @@ src/client/CMakeFiles/QChat.dir/main.cpp.o
  ../include/client/clientcore.h
  ../include/client/loginwidget.h
  ../include/client/mainchatwindow.h
- ../include/public.hpp
- ../include/server/model/group.hpp
- ../include/server/model/groupuser.hpp
- ../include/server/model/user.hpp
+ ../include/common/group.hpp
+ ../include/common/groupuser.hpp
+ ../include/common/public.hpp
+ ../include/common/user.hpp
  ../thirdparty/json.hpp
  /home/wmiracle/Codes/chatserver/src/client/main.cpp
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QList
@@ -916,14 +916,10 @@ src/client/CMakeFiles/QChat.dir/main.cpp.o
 src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.o
  ../include/client/clientcore.h
  ../include/client/mainchatwindow.h
- ../include/public.hpp
- ../include/server/db/connpool.h
- ../include/server/db/mysqlconn.h
- ../include/server/model/friendmodel.hpp
- ../include/server/model/group.hpp
- ../include/server/model/groupuser.hpp
- ../include/server/model/user.hpp
- ../include/server/model/usermodel.hpp
+ ../include/common/group.hpp
+ ../include/common/groupuser.hpp
+ ../include/common/public.hpp
+ ../include/common/user.hpp
  ../thirdparty/json.hpp
  /home/wmiracle/Codes/chatserver/src/client/mainchatwindow.cpp
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QList
@@ -1172,10 +1168,10 @@ src/client/CMakeFiles/QChat.dir/registerwidget.cpp.o
  ../include/client/clientcore.h
  ../include/client/loginwidget.h
  ../include/client/registerwidget.h
- ../include/public.hpp
- ../include/server/model/group.hpp
- ../include/server/model/groupuser.hpp
- ../include/server/model/user.hpp
+ ../include/common/group.hpp
+ ../include/common/groupuser.hpp
+ ../include/common/public.hpp
+ ../include/common/user.hpp
  ../thirdparty/json.hpp
  /home/wmiracle/Codes/chatserver/src/client/registerwidget.cpp
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QList

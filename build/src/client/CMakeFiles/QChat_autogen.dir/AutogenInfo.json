@@ -31,7 +31,7 @@
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/include",
 	"MOC_COMPILATION_FILE" : "/home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB" ],
+	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NETWORK_LIB", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -42,17 +42,19 @@
 	"MOC_INCLUDES" : 
 	[
 		"/home/wmiracle/Codes/chatserver/include",
+		"/home/wmiracle/Codes/chatserver/include/common",
+		"/home/wmiracle/Codes/chatserver/thirdparty",
 		"/home/wmiracle/Codes/chatserver/include/server",
 		"/home/wmiracle/Codes/chatserver/include/server/db",
 		"/home/wmiracle/Codes/chatserver/include/server/model",
 		"/home/wmiracle/Codes/chatserver/include/server/redis",
 		"/home/wmiracle/Codes/chatserver/include/client",
-		"/home/wmiracle/Codes/chatserver/thirdparty",
 		"/home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore",
 		"/home/wmiracle/Qt/6.8.3/gcc_64/include",
 		"/home/wmiracle/Qt/6.8.3/gcc_64/mkspecs/linux-g++",
 		"/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets",
 		"/home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui",
+		"/home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork",
 		"/usr/include",
 		"/usr/include/c++/9",
 		"/usr/include/x86_64-linux-gnu/c++/9",
@@ -66,7 +68,7 @@
 	"MOC_PATH_PREFIX" : true,
 	"MOC_PREDEFS_CMD" : 
 	[
-		"/usr/bin/c++",
+		"/usr/bin/g++",
 		"-dM",
 		"-E",
 		"-c",

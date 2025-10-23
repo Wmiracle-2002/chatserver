@@ -1,8 +1,9 @@
--I/home/wmiracle/Codes/chatserver/thirdparty
 -I/home/wmiracle/Codes/chatserver/include/client
 -I/home/wmiracle/Codes/chatserver/include/server/redis
 -I/home/wmiracle/Codes/chatserver/include/server/model
 -I/home/wmiracle/Codes/chatserver/include/server/db
 -I/home/wmiracle/Codes/chatserver/include/server
+-I/home/wmiracle/Codes/chatserver/thirdparty
+-I/home/wmiracle/Codes/chatserver/include/common
 -I/home/wmiracle/Codes/chatserver/include
 /home/wmiracle/Codes/chatserver
