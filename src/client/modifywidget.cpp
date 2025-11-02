@@ -18,6 +18,7 @@ ModifyWidget::ModifyWidget(ClientCore *clientCore, QWidget *parent)
     connect(m_pm, &PictureManager::pictureDownloaded, this, &ModifyWidget::onPictureDownloaded);
     connect(m_pm, &PictureManager::pictureUploaded, this, &ModifyWidget::onPictureUploaded);
 
+    m_pm->showPicture("", ui->pictureLabel);
     m_pm->downloadPicture(QString::number(m_clientCore->g_currentUser.getId()));
 
     connect(m_clientCore, &ClientCore::nameModified, this, &ModifyWidget::onNameModified);

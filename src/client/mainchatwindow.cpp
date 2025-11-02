@@ -51,19 +51,6 @@ MainChatWindow::MainChatWindow(ClientCore* clientCore, QWidget *parent)
     connect(m_pm, &PictureManager::pictureDownloaded, this, &MainChatWindow::onPictureDownloaded);
 
     ui->sendButton->setDefault(true);
-
-    QString id = QString::number(m_clientCore->g_currentUser.getId());
-    // 删除该用户的头像缓存
-    m_pm->deleteCachedPicture(id);
-    // 立即重新下载新头像
-    m_pm->downloadPicture(id);
-    for(auto user : m_clientCore->g_currentUserFriendList){
-        QString userid = QString::number(user.getId());
-        // 删除该用户的头像缓存
-        m_pm->deleteCachedPicture(userid);
-        // 立即重新下载新头像
-        m_pm->downloadPicture(userid);
-    }
 }
 
 MainChatWindow::~MainChatWindow()
@@ -90,6 +77,22 @@ void MainChatWindow::addCurrentGroup()
         QString groupid = QString::number(g.getId());
         QString groupname = QString::fromStdString(g.getName());
         m_groupList.insert(groupid, groupname);
+    }
+}
+
+void MainChatWindow::updatePictureInfo()
+{
+    QString id = QString::number(m_clientCore->g_currentUser.getId());
+    // 删除该用户的头像缓存
+    m_pm->deleteCachedPicture(id);
+    // 立即重新下载新头像
+    m_pm->downloadPicture(id);
+    for(auto user : m_clientCore->g_currentUserFriendList){
+        QString userid = QString::number(user.getId());
+        // 删除该用户的头像缓存
+        m_pm->deleteCachedPicture(userid);
+        // 立即重新下载新头像
+        m_pm->downloadPicture(userid);
     }
 }
 
@@ -356,6 +359,7 @@ void MainChatWindow::showUserInfo()
     QString showid = QString::fromStdString("账号：") + QString::number(id);
     QString showname = QString::fromStdString("昵称：" + name);
     // 加载原图
+    m_pm->showPicture("", ui->pictureLabel);
     m_pm->downloadPicture(QString::number(id));
     ui->idLabel->setText(showid);
     ui->nameLabel->setText(showname);
@@ -443,6 +447,7 @@ void MainChatWindow::fillFriendList()
         item->setSizeHint(QSize(0, 48));
         for(User user : m_clientCore->g_currentUserFriendList){ // 获取好友头像
             if(QString::number(user.getId()) == it.key()){
+                m_pm->showPicture("", item);
                 m_pm->downloadPicture(it.key());
                 break;
             }

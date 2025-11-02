@@ -28,6 +28,7 @@ public:
     void addCurrentGroup();
     void fillFriendList();
     void fillGroupList();
+    void updatePictureInfo();
     void loadConversation(QString id);
     void showInfo(const QString& type, const QString& title, const QString& msg);
     void showUserInfo();

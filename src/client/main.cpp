@@ -31,8 +31,8 @@ int main(int argc, char *argv[])
 
     // 创建核心网络组件
     ClientCore *clientCore = new ClientCore;
-    clientCore->connectToServer("127.0.0.1", 8000);
-    // clientCore->connectToServer("47.111.168.1", 8000);
+    // clientCore->connectToServer("127.0.0.1", 8000);
+    clientCore->connectToServer("47.111.183.136", 8000);
     // 创建登录界面，传入核心网络对象
     LoginWidget loginWidget(clientCore);
     loginWidget.show();
@@ -46,6 +46,7 @@ int main(int argc, char *argv[])
         
         mWindow->show();
         clientCore->doLoginResponse(js);
+        mWindow->updatePictureInfo();
         emit clientCore->refreshUserInfo();
         mWindow->fillFriendList();
     });

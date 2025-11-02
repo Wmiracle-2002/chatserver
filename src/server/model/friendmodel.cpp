@@ -16,7 +16,7 @@ void FriendModel::insert(ConnectionPool &cp, int userid, int friendid){
 vector<User> FriendModel::query(ConnectionPool &cp, int userid){
     // 组装sql语句
     char sql[1024] = {0};
-    sprintf(sql, "select a.id,a.name,a.state,a.picture from User a inner join Friend b on b.friendid = a.id where b.userid = %d", userid);
+    sprintf(sql, "select a.id,a.name,a.state from User a inner join Friend b on b.friendid = a.id where b.userid = %d", userid);
     shared_ptr<MysqlConn> mysql = cp.getConnection();
     vector<User> vec;
     if(mysql->query(sql)){

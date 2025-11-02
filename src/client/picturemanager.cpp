@@ -11,7 +11,7 @@
 PictureManager::PictureManager(ClientCore* clientCore, QObject* parent)
     : QObject(parent)
     , m_clientCore(clientCore)
-    , m_httpServerUrl("http://localhost:8080")
+    , m_httpServerUrl("http://47.111.183.136:8080")
     , m_networkManager(new QNetworkAccessManager(this))
 {
     QString appDataPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
@@ -244,8 +244,7 @@ QPixmap PictureManager::compressPicture(const QPixmap& pixmap)
 void PictureManager::deleteCachedPicture(const QString& userid)
 {
     QString cachePath = getCachePath(userid);
-    QString pictureFile = cachePath + "/" + userid + ".png";
-    QFile file(pictureFile);
+    QFile file(cachePath);
     if (file.exists()) {
         if (file.remove()) {
             qDebug() << "删除本地头像文件，用户ID:" << userid;

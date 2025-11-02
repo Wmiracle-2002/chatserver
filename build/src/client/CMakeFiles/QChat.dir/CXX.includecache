@@ -36,8 +36,16 @@ arpa/inet.h
 unistd.h
 -
 
-../include/client/modifywidget.h
+../include/client/loginwidget.h
 QWidget
+-
+clientcore.h
+../include/client/clientcore.h
+
+../include/client/mainchatwindow.h
+QMainWindow
+-
+QListWidgetItem
 -
 clientcore.h
 ../include/client/clientcore.h
@@ -404,21 +412,25 @@ limits
 type_traits
 -
 
-/home/wmiracle/Codes/chatserver/src/client/modifywidget.cpp
-modifywidget.h
-/home/wmiracle/Codes/chatserver/src/client/modifywidget.h
-ui_modifywidget.h
-/home/wmiracle/Codes/chatserver/src/client/ui_modifywidget.h
-public.hpp
-/home/wmiracle/Codes/chatserver/src/client/public.hpp
-QMessageBox
+/home/wmiracle/Codes/chatserver/src/client/main.cpp
+json.hpp
+/home/wmiracle/Codes/chatserver/src/client/json.hpp
+iostream
 -
-QFileDialog
+string
 -
-QStandardPaths
+loginwidget.h
+/home/wmiracle/Codes/chatserver/src/client/loginwidget.h
+clientcore.h
+/home/wmiracle/Codes/chatserver/src/client/clientcore.h
+mainchatwindow.h
+/home/wmiracle/Codes/chatserver/src/client/mainchatwindow.h
+QApplication
 -
-picturemanager.h
-/home/wmiracle/Codes/chatserver/src/client/picturemanager.h
+QLocale
+-
+QTranslator
+-
 
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QFlags
 qflags.h
@@ -427,6 +439,10 @@ qflags.h
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QList
 qlist.h
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qlist.h
+
+/home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QLocale
+qlocale.h
+/home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qlocale.h
 
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QMetaType
 qmetatype.h
@@ -452,10 +468,6 @@ qsize.h
 qsize.h
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qsize.h
 
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QStandardPaths
-qstandardpaths.h
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstandardpaths.h
-
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QString
 qstring.h
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstring.h
@@ -463,6 +475,10 @@ qstring.h
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QThread
 qthread.h
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qthread.h
+
+/home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QTranslator
+qtranslator.h
+/home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtranslator.h
 
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QUrl
 qurl.h
@@ -966,38 +982,6 @@ QtCore/qset.h
 QtCore/qvarlengtharray.h
 -
 
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdir.h
-QtCore/qcompare.h
--
-QtCore/qstring.h
--
-QtCore/qdirlisting.h
--
-QtCore/qfile.h
--
-QtCore/qfileinfo.h
--
-QtCore/qstringlist.h
--
-QtCore/qshareddata.h
--
-
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdirlisting.h
-QtCore/qfiledevice.h
--
-QtCore/qflags.h
--
-QtCore/qtclasshelpermacros.h
--
-QtCore/qtcoreexports.h
--
-QtCore/qdatetime.h
--
-iterator
--
-utility
--
-
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qelapsedtimer.h
 QtCore/qcompare.h
 -
@@ -1038,38 +1022,6 @@ QtCore/qtconfigmacros.h
 QtCore/qcompilerdetection.h
 -
 QtCore/qtcoreexports.h
--
-
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfile.h
-QtCore/qfiledevice.h
--
-QtCore/qstring.h
--
-stdio.h
--
-filesystem
--
-
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfiledevice.h
-QtCore/qiodevice.h
--
-QtCore/qstring.h
--
-
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfileinfo.h
-QtCore/qcompare.h
--
-QtCore/qfile.h
--
-QtCore/qlist.h
--
-QtCore/qshareddata.h
--
-QtCore/qmetatype.h
--
-QtCore/qdatetime.h
--
-QtCore/qtimezone.h
 -
 
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qflags.h
@@ -1802,12 +1754,6 @@ span
 QtCore/q20type_traits.h
 -
 
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstandardpaths.h
-QtCore/qstringlist.h
--
-QtCore/qobjectdefs.h
--
-
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstring.h
 QtCore/qchar.h
 -
@@ -2078,20 +2024,6 @@ QtCore/qrunnable.h
 functional
 -
 
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtimezone.h
-QtCore/qcompare.h
--
-QtCore/qdatetime.h
--
-QtCore/qlocale.h
--
-QtCore/qswap.h
--
-QtCore/qtclasshelpermacros.h
--
-chrono
--
-
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtmetamacros.h
 QtCore/qglobal.h
 -
@@ -2101,6 +2033,12 @@ QtCore/qtclasshelpermacros.h
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtnoop.h
 
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtpreprocessorsupport.h
+
+/home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtranslator.h
+QtCore/qobject.h
+-
+QtCore/qbytearray.h
+-
 
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtresource.h
 QtCore/qtconfigmacros.h
@@ -2540,16 +2478,6 @@ QtGui/qcolor.h
 QtGui/qbrush.h
 -
 
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpen.h
-QtCore/qshareddata.h
--
-QtGui/qtguiglobal.h
--
-QtGui/qcolor.h
--
-QtGui/qbrush.h
--
-
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpicture.h
 QtGui/qtguiglobal.h
 -
@@ -2660,18 +2588,6 @@ QtGui/qguiapplication.h
 QtGui/qwindowdefs_win.h
 -
 
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtextcursor.h
-QtGui/qtguiglobal.h
--
-QtCore/qstring.h
--
-QtCore/qshareddata.h
--
-QtGui/qtextdocument.h
--
-QtGui/qtextformat.h
--
-
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtextdocument.h
 QtGui/qtguiglobal.h
 -
@@ -2688,36 +2604,6 @@ QtGui/qfont.h
 QtCore/qurl.h
 -
 QtCore/qcontainerfwd.h
--
-
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtextformat.h
-QtGui/qbrush.h
--
-QtGui/qcolor.h
--
-QtGui/qfont.h
--
-QtGui/qpen.h
--
-QtGui/qtextoption.h
--
-QtGui/qtguiglobal.h
--
-QtCore/qlist.h
--
-QtCore/qshareddata.h
--
-QtCore/qvariant.h
--
-
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtextoption.h
-QtGui/qtguiglobal.h
--
-QtCore/qnamespace.h
--
-QtCore/qchar.h
--
-QtCore/qmetatype.h
 -
 
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtgui-config.h
@@ -2976,43 +2862,21 @@ QtNetwork/qtnetworkexports.h
 qapplication.h
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qapplication.h
 
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QFileDialog
-qfiledialog.h
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qfiledialog.h
-
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QLabel
 qlabel.h
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlabel.h
-
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QLineEdit
-qlineedit.h
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlineedit.h
 
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QListWidgetItem
 qlistwidget.h
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlistwidget.h
 
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QMessageBox
-qmessagebox.h
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qmessagebox.h
-
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QPushButton
-qpushbutton.h
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qpushbutton.h
+/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QMainWindow
+qmainwindow.h
+/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qmainwindow.h
 
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QWidget
 qwidget.h
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qwidget.h
-
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qabstractbutton.h
-QtWidgets/qtwidgetsglobal.h
--
-QtGui/qicon.h
--
-QtGui/qkeysequence.h
--
-QtWidgets/qwidget.h
--
 
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qabstractitemdelegate.h
 QtWidgets/qtwidgetsglobal.h
@@ -3070,32 +2934,6 @@ QtGui/qcursor.h
 QtGui/qguiapplication.h
 -
 
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qdialog.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qwidget.h
--
-
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qdialogbuttonbox.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qwidget.h
--
-
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qfiledialog.h
-QtWidgets/qtwidgetsglobal.h
--
-QtCore/qdir.h
--
-QtCore/qstring.h
--
-QtCore/qurl.h
--
-QtWidgets/qdialog.h
--
-functional
--
-
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qframe.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -3110,18 +2948,6 @@ QtWidgets/qframe.h
 QtGui/qpicture.h
 -
 QtGui/qtextdocument.h
--
-
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlineedit.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qframe.h
--
-QtGui/qtextcursor.h
--
-QtCore/qstring.h
--
-QtCore/qmargins.h
 -
 
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlistview.h
@@ -3142,18 +2968,12 @@ QtCore/qitemselectionmodel.h
 QtCore/qvariant.h
 -
 
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qmessagebox.h
+/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qmainwindow.h
 QtWidgets/qtwidgetsglobal.h
 -
-QtWidgets/qdialog.h
+QtWidgets/qwidget.h
 -
-QtWidgets/qdialogbuttonbox.h
--
-
-/home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qpushbutton.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qabstractbutton.h
+QtWidgets/qtabwidget.h
 -
 
 /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qrubberband.h
@@ -3288,19 +3108,5 @@ QtGui/qcursor.h
 QtGui/qkeysequence.h
 -
 QtGui/qevent.h
--
-
-src/client/QChat_autogen/include/ui_modifywidget.h
-QtCore/QVariant
--
-QtWidgets/QApplication
--
-QtWidgets/QLabel
--
-QtWidgets/QLineEdit
--
-QtWidgets/QPushButton
--
-QtWidgets/QWidget
 -
 
