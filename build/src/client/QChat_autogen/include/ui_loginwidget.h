@@ -50,10 +50,12 @@ public:
         QChatLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
         usernameLable = new QLabel(LoginWidget);
         usernameLable->setObjectName("usernameLable");
-        usernameLable->setGeometry(QRect(50, 130, 81, 17));
+        usernameLable->setGeometry(QRect(50, 130, 71, 17));
+        usernameLable->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
         passwordLable = new QLabel(LoginWidget);
         passwordLable->setObjectName("passwordLable");
-        passwordLable->setGeometry(QRect(50, 170, 81, 17));
+        passwordLable->setGeometry(QRect(50, 170, 71, 17));
+        passwordLable->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
         usernameEdit = new QLineEdit(LoginWidget);
         usernameEdit->setObjectName("usernameEdit");
         usernameEdit->setGeometry(QRect(130, 130, 161, 20));
@@ -70,11 +72,11 @@ public:
     void retranslateUi(QWidget *LoginWidget)
     {
         LoginWidget->setWindowTitle(QCoreApplication::translate("LoginWidget", "Form", nullptr));
-        registerButton->setText(QCoreApplication::translate("LoginWidget", "Register", nullptr));
-        loginButton->setText(QCoreApplication::translate("LoginWidget", "Login", nullptr));
+        registerButton->setText(QCoreApplication::translate("LoginWidget", "\346\263\250\345\206\214", nullptr));
+        loginButton->setText(QCoreApplication::translate("LoginWidget", "\347\231\273\345\275\225", nullptr));
         QChatLabel->setText(QCoreApplication::translate("LoginWidget", "QChat", nullptr));
-        usernameLable->setText(QCoreApplication::translate("LoginWidget", "username:", nullptr));
-        passwordLable->setText(QCoreApplication::translate("LoginWidget", "password:", nullptr));
+        usernameLable->setText(QCoreApplication::translate("LoginWidget", "\350\264\246\345\217\267\357\274\232", nullptr));
+        passwordLable->setText(QCoreApplication::translate("LoginWidget", "\345\257\206\347\240\201\357\274\232", nullptr));
     } // retranslateUi
 
 };

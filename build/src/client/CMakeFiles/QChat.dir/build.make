@@ -60,80 +60,106 @@ include src/client/CMakeFiles/QChat.dir/flags.make
 src/client/CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.o: src/client/CMakeFiles/QChat.dir/flags.make
 src/client/CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.o: src/client/QChat_autogen/mocs_compilation.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wmiracle/Codes/chatserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/client/CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.o"
-	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.o -c /home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/mocs_compilation.cpp
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.o -c /home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/mocs_compilation.cpp
 
 src/client/CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.i"
-	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/mocs_compilation.cpp > CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.i
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/mocs_compilation.cpp > CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.i
 
 src/client/CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.s"
-	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/mocs_compilation.cpp -o CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.s
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/mocs_compilation.cpp -o CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.s
 
 src/client/CMakeFiles/QChat.dir/main.cpp.o: src/client/CMakeFiles/QChat.dir/flags.make
 src/client/CMakeFiles/QChat.dir/main.cpp.o: ../src/client/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wmiracle/Codes/chatserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/client/CMakeFiles/QChat.dir/main.cpp.o"
-	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QChat.dir/main.cpp.o -c /home/wmiracle/Codes/chatserver/src/client/main.cpp
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QChat.dir/main.cpp.o -c /home/wmiracle/Codes/chatserver/src/client/main.cpp
 
 src/client/CMakeFiles/QChat.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QChat.dir/main.cpp.i"
-	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Codes/chatserver/src/client/main.cpp > CMakeFiles/QChat.dir/main.cpp.i
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Codes/chatserver/src/client/main.cpp > CMakeFiles/QChat.dir/main.cpp.i
 
 src/client/CMakeFiles/QChat.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QChat.dir/main.cpp.s"
-	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Codes/chatserver/src/client/main.cpp -o CMakeFiles/QChat.dir/main.cpp.s
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Codes/chatserver/src/client/main.cpp -o CMakeFiles/QChat.dir/main.cpp.s
 
 src/client/CMakeFiles/QChat.dir/loginwidget.cpp.o: src/client/CMakeFiles/QChat.dir/flags.make
 src/client/CMakeFiles/QChat.dir/loginwidget.cpp.o: ../src/client/loginwidget.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wmiracle/Codes/chatserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/client/CMakeFiles/QChat.dir/loginwidget.cpp.o"
-	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QChat.dir/loginwidget.cpp.o -c /home/wmiracle/Codes/chatserver/src/client/loginwidget.cpp
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QChat.dir/loginwidget.cpp.o -c /home/wmiracle/Codes/chatserver/src/client/loginwidget.cpp
 
 src/client/CMakeFiles/QChat.dir/loginwidget.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QChat.dir/loginwidget.cpp.i"
-	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Codes/chatserver/src/client/loginwidget.cpp > CMakeFiles/QChat.dir/loginwidget.cpp.i
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Codes/chatserver/src/client/loginwidget.cpp > CMakeFiles/QChat.dir/loginwidget.cpp.i
 
 src/client/CMakeFiles/QChat.dir/loginwidget.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QChat.dir/loginwidget.cpp.s"
-	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Codes/chatserver/src/client/loginwidget.cpp -o CMakeFiles/QChat.dir/loginwidget.cpp.s
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Codes/chatserver/src/client/loginwidget.cpp -o CMakeFiles/QChat.dir/loginwidget.cpp.s
 
 src/client/CMakeFiles/QChat.dir/clientcore.cpp.o: src/client/CMakeFiles/QChat.dir/flags.make
 src/client/CMakeFiles/QChat.dir/clientcore.cpp.o: ../src/client/clientcore.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wmiracle/Codes/chatserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/client/CMakeFiles/QChat.dir/clientcore.cpp.o"
-	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QChat.dir/clientcore.cpp.o -c /home/wmiracle/Codes/chatserver/src/client/clientcore.cpp
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QChat.dir/clientcore.cpp.o -c /home/wmiracle/Codes/chatserver/src/client/clientcore.cpp
 
 src/client/CMakeFiles/QChat.dir/clientcore.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QChat.dir/clientcore.cpp.i"
-	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Codes/chatserver/src/client/clientcore.cpp > CMakeFiles/QChat.dir/clientcore.cpp.i
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Codes/chatserver/src/client/clientcore.cpp > CMakeFiles/QChat.dir/clientcore.cpp.i
 
 src/client/CMakeFiles/QChat.dir/clientcore.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QChat.dir/clientcore.cpp.s"
-	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Codes/chatserver/src/client/clientcore.cpp -o CMakeFiles/QChat.dir/clientcore.cpp.s
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Codes/chatserver/src/client/clientcore.cpp -o CMakeFiles/QChat.dir/clientcore.cpp.s
 
 src/client/CMakeFiles/QChat.dir/registerwidget.cpp.o: src/client/CMakeFiles/QChat.dir/flags.make
 src/client/CMakeFiles/QChat.dir/registerwidget.cpp.o: ../src/client/registerwidget.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wmiracle/Codes/chatserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/client/CMakeFiles/QChat.dir/registerwidget.cpp.o"
-	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QChat.dir/registerwidget.cpp.o -c /home/wmiracle/Codes/chatserver/src/client/registerwidget.cpp
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QChat.dir/registerwidget.cpp.o -c /home/wmiracle/Codes/chatserver/src/client/registerwidget.cpp
 
 src/client/CMakeFiles/QChat.dir/registerwidget.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QChat.dir/registerwidget.cpp.i"
-	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Codes/chatserver/src/client/registerwidget.cpp > CMakeFiles/QChat.dir/registerwidget.cpp.i
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Codes/chatserver/src/client/registerwidget.cpp > CMakeFiles/QChat.dir/registerwidget.cpp.i
 
 src/client/CMakeFiles/QChat.dir/registerwidget.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QChat.dir/registerwidget.cpp.s"
-	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Codes/chatserver/src/client/registerwidget.cpp -o CMakeFiles/QChat.dir/registerwidget.cpp.s
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Codes/chatserver/src/client/registerwidget.cpp -o CMakeFiles/QChat.dir/registerwidget.cpp.s
 
 src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.o: src/client/CMakeFiles/QChat.dir/flags.make
 src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.o: ../src/client/mainchatwindow.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wmiracle/Codes/chatserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.o"
-	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QChat.dir/mainchatwindow.cpp.o -c /home/wmiracle/Codes/chatserver/src/client/mainchatwindow.cpp
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QChat.dir/mainchatwindow.cpp.o -c /home/wmiracle/Codes/chatserver/src/client/mainchatwindow.cpp
 
 src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QChat.dir/mainchatwindow.cpp.i"
-	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Codes/chatserver/src/client/mainchatwindow.cpp > CMakeFiles/QChat.dir/mainchatwindow.cpp.i
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Codes/chatserver/src/client/mainchatwindow.cpp > CMakeFiles/QChat.dir/mainchatwindow.cpp.i
 
 src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QChat.dir/mainchatwindow.cpp.s"
-	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Codes/chatserver/src/client/mainchatwindow.cpp -o CMakeFiles/QChat.dir/mainchatwindow.cpp.s
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Codes/chatserver/src/client/mainchatwindow.cpp -o CMakeFiles/QChat.dir/mainchatwindow.cpp.s
+
+src/client/CMakeFiles/QChat.dir/modifywidget.cpp.o: src/client/CMakeFiles/QChat.dir/flags.make
+src/client/CMakeFiles/QChat.dir/modifywidget.cpp.o: ../src/client/modifywidget.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wmiracle/Codes/chatserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/client/CMakeFiles/QChat.dir/modifywidget.cpp.o"
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QChat.dir/modifywidget.cpp.o -c /home/wmiracle/Codes/chatserver/src/client/modifywidget.cpp
+
+src/client/CMakeFiles/QChat.dir/modifywidget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QChat.dir/modifywidget.cpp.i"
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Codes/chatserver/src/client/modifywidget.cpp > CMakeFiles/QChat.dir/modifywidget.cpp.i
+
+src/client/CMakeFiles/QChat.dir/modifywidget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QChat.dir/modifywidget.cpp.s"
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Codes/chatserver/src/client/modifywidget.cpp -o CMakeFiles/QChat.dir/modifywidget.cpp.s
+
+src/client/CMakeFiles/QChat.dir/picturemanager.cpp.o: src/client/CMakeFiles/QChat.dir/flags.make
+src/client/CMakeFiles/QChat.dir/picturemanager.cpp.o: ../src/client/picturemanager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wmiracle/Codes/chatserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/client/CMakeFiles/QChat.dir/picturemanager.cpp.o"
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/QChat.dir/picturemanager.cpp.o -c /home/wmiracle/Codes/chatserver/src/client/picturemanager.cpp
+
+src/client/CMakeFiles/QChat.dir/picturemanager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/QChat.dir/picturemanager.cpp.i"
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Codes/chatserver/src/client/picturemanager.cpp > CMakeFiles/QChat.dir/picturemanager.cpp.i
+
+src/client/CMakeFiles/QChat.dir/picturemanager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/QChat.dir/picturemanager.cpp.s"
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Codes/chatserver/src/client/picturemanager.cpp -o CMakeFiles/QChat.dir/picturemanager.cpp.s
 
 # Object files for target QChat
 QChat_OBJECTS = \
@@ -142,7 +168,9 @@ QChat_OBJECTS = \
 "CMakeFiles/QChat.dir/loginwidget.cpp.o" \
 "CMakeFiles/QChat.dir/clientcore.cpp.o" \
 "CMakeFiles/QChat.dir/registerwidget.cpp.o" \
-"CMakeFiles/QChat.dir/mainchatwindow.cpp.o"
+"CMakeFiles/QChat.dir/mainchatwindow.cpp.o" \
+"CMakeFiles/QChat.dir/modifywidget.cpp.o" \
+"CMakeFiles/QChat.dir/picturemanager.cpp.o"
 
 # External object files for target QChat
 QChat_EXTERNAL_OBJECTS =
@@ -153,6 +181,8 @@ QChat_EXTERNAL_OBJECTS =
 ../bin/QChat: src/client/CMakeFiles/QChat.dir/clientcore.cpp.o
 ../bin/QChat: src/client/CMakeFiles/QChat.dir/registerwidget.cpp.o
 ../bin/QChat: src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.o
+../bin/QChat: src/client/CMakeFiles/QChat.dir/modifywidget.cpp.o
+../bin/QChat: src/client/CMakeFiles/QChat.dir/picturemanager.cpp.o
 ../bin/QChat: src/client/CMakeFiles/QChat.dir/build.make
 ../bin/QChat: /home/wmiracle/Qt/6.8.3/gcc_64/lib/libQt6Widgets.so.6.8.3
 ../bin/QChat: /home/wmiracle/Qt/6.8.3/gcc_64/lib/libQt6Network.so.6.8.3
@@ -161,7 +191,7 @@ QChat_EXTERNAL_OBJECTS =
 ../bin/QChat: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 ../bin/QChat: /home/wmiracle/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6.8.3
 ../bin/QChat: src/client/CMakeFiles/QChat.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wmiracle/Codes/chatserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ../../../bin/QChat"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wmiracle/Codes/chatserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ../../../bin/QChat"
 	cd /home/wmiracle/Codes/chatserver/build/src/client && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/QChat.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -14,12 +14,44 @@ bool UserModel::insert(ConnectionPool &cp, User& user){
     return false;
 }
 
-// User表的修改方法
+// User表的修改在线状态方法
 bool UserModel::updateState(ConnectionPool &cp, User user){
     // 组装sql语句
     char sql[1024] = {0};
     sprintf(sql, "update User set state = '%s' where id = %d", user.getState().c_str(), user.getId());
     shared_ptr<MysqlConn> mysql = cp.getConnection();
+    if(mysql->update(sql)){
+        return true;
+    }
+    return false;
+}
+
+// User表的修改用户名方法
+bool UserModel::updateUsername(ConnectionPool &cp, User user){
+    // 组装sql语句
+    char sql[1024] = {0};
+    sprintf(sql, "update User set name = '%s' where id = %d", user.getName().c_str(), user.getId());
+    shared_ptr<MysqlConn> mysql = cp.getConnection();
+    if(mysql->update(sql)){
+        return true;
+    }
+    return false;
+}
+
+// User表的修改密码方法
+bool UserModel::updatePassword(ConnectionPool &cp, User user, string new_pwd){
+    // 组装sql语句
+    char sql[1024] = {0};
+    sprintf(sql, "select password from User where id = %d", user.getId());
+    shared_ptr<MysqlConn> mysql = cp.getConnection();
+    if(mysql->query(sql)){
+        mysql->next();
+        MYSQL_ROW row = mysql->getRow();
+        if(row == nullptr || user.getPwd() != row[0]){
+            return false;
+        }
+    }
+    sprintf(sql, "update User set password = '%s' where id = %d", new_pwd.c_str(), user.getId());
     if(mysql->update(sql)){
         return true;
     }

@@ -2,11 +2,18 @@
 /home/wmiracle/Codes/chatserver/src/client/registerwidget.cpp
  uic:ui_loginwidget.h
  uic:ui_registerwidget.h
+/home/wmiracle/Codes/chatserver/src/client/picturemanager.cpp
 /home/wmiracle/Codes/chatserver/src/client/mainchatwindow.cpp
  uic:ui_mainchatwindow.h
-/home/wmiracle/Codes/chatserver/src/client/main.cpp
 /home/wmiracle/Codes/chatserver/src/client/clientcore.cpp
 /home/wmiracle/Codes/chatserver/include/client/registerwidget.h
+ mmc:Q_OBJECT
+/home/wmiracle/Codes/chatserver/src/client/main.cpp
+/home/wmiracle/Codes/chatserver/include/client/picturemanager.h
+ mmc:Q_OBJECT
+/home/wmiracle/Codes/chatserver/src/client/modifywidget.cpp
+ uic:ui_modifywidget.h
+/home/wmiracle/Codes/chatserver/include/client/modifywidget.h
  mmc:Q_OBJECT
 /home/wmiracle/Codes/chatserver/include/client/mainchatwindow.h
  mmc:Q_OBJECT

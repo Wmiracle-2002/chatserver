@@ -23,6 +23,16 @@
 			"V52LERMGDR/moc_mainchatwindow.cpp"
 		],
 		[
+			"/home/wmiracle/Codes/chatserver/include/client/modifywidget.h",
+			"MU",
+			"V52LERMGDR/moc_modifywidget.cpp"
+		],
+		[
+			"/home/wmiracle/Codes/chatserver/include/client/picturemanager.h",
+			"MU",
+			"V52LERMGDR/moc_picturemanager.cpp"
+		],
+		[
 			"/home/wmiracle/Codes/chatserver/include/client/registerwidget.h",
 			"MU",
 			"V52LERMGDR/moc_registerwidget.cpp"
@@ -31,7 +41,14 @@
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/include",
 	"MOC_COMPILATION_FILE" : "/home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NETWORK_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NETWORK_LIB",
+		"QT_NO_DEBUG",
+		"QT_WIDGETS_LIB"
+	],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -68,7 +85,7 @@
 	"MOC_PATH_PREFIX" : true,
 	"MOC_PREDEFS_CMD" : 
 	[
-		"/usr/bin/g++",
+		"/usr/bin/c++",
 		"-dM",
 		"-E",
 		"-c",
@@ -90,6 +107,8 @@
 		[ "/home/wmiracle/Codes/chatserver/src/client/loginwidget.cpp", "MU" ],
 		[ "/home/wmiracle/Codes/chatserver/src/client/main.cpp", "MU" ],
 		[ "/home/wmiracle/Codes/chatserver/src/client/mainchatwindow.cpp", "MU" ],
+		[ "/home/wmiracle/Codes/chatserver/src/client/modifywidget.cpp", "MU" ],
+		[ "/home/wmiracle/Codes/chatserver/src/client/picturemanager.cpp", "MU" ],
 		[ "/home/wmiracle/Codes/chatserver/src/client/registerwidget.cpp", "MU" ]
 	],
 	"UIC_OPTIONS" : [],

@@ -19,6 +19,9 @@ ChatService::ChatService(){
     _msgHanderMap.insert({ADD_GROUP_MSG, bind(&ChatService::addGroup, this, _1, _2, _3)});
     _msgHanderMap.insert({GROUP_CHAT_MSG, bind(&ChatService::groupChat, this, _1, _2, _3)});
     _msgHanderMap.insert({QUIT_GROUP_MSG, bind(&ChatService::quitGroup, this, _1, _2, _3)});
+    _msgHanderMap.insert({MODIFY_NAME_MSG, bind(&ChatService::modifyUsername, this, _1, _2, _3)});
+    _msgHanderMap.insert({MODIFY_PASSWORD_MSG, bind(&ChatService::modifyPassword, this, _1, _2, _3)});
+    _msgHanderMap.insert({MODIFY_PICTURE_MSG, bind(&ChatService::modifyPicture, this, _1, _2, _3)});
     // 连接redis服务器
     if(_redis.connect()){
         // 设置上报消息的回调
@@ -117,6 +120,7 @@ void ChatService::login(const TcpConnectionPtr& conn, json& js, Timestamp time){
         conn->send(response.dump());
     }
 }
+
 // 处理注册业务
 void ChatService::reg(const TcpConnectionPtr& conn, json& js, Timestamp time){
     // LOG_INFO << "do reg service!!!";
@@ -142,6 +146,59 @@ void ChatService::reg(const TcpConnectionPtr& conn, json& js, Timestamp time){
         response["errmsg"] = "register fail!";
         conn->send(response.dump());
     }
+}
+
+// 处理修改用户名业务
+void ChatService::modifyUsername(const TcpConnectionPtr& conn, json& js, Timestamp time){
+    int id = js["id"];
+    string new_name = js["name"];
+    User user(id, new_name);
+    json responsejs;
+    lock_guard<mutex> lock(_connMutex);
+    if(_userModel.updateUsername(*cp, user)){
+        responsejs["errno"] = 0;
+        responsejs["id"] = id;
+        responsejs["name"] = new_name;
+        responsejs["picture"] = js["picture"];
+
+        responsejs["msgid"] = FRIEND_INFO_CHANGED;
+        // 获取所有在线好友信息
+        vector<User> friends = _friendModel.query(*cp, id);
+        for(User f : friends){
+            if(f.getState() == "offline") continue;
+            auto it = _userConnectionMap.find(f.getId());
+            if(it == _userConnectionMap.end()) continue;
+            it->second->send(responsejs.dump());
+        }
+    }
+    else{
+        responsejs["errno"] = 1;
+    }
+    responsejs["msgid"] = MODIFY_NAME_ACK;
+    conn->send(responsejs.dump());
+}
+
+// 处理修改密码业务
+void ChatService::modifyPassword(const TcpConnectionPtr& conn, json& js, Timestamp time){
+    int id = js["id"];
+    string name = js["name"];
+    string old_pwd = js["old_password"];
+    string new_pwd = js["new_password"];
+    User user(id, name, old_pwd);
+    json responsejs;
+    responsejs["msgid"] = MODIFY_PASSWORD_ACK;
+    lock_guard<mutex> lock(_connMutex);
+    if(_userModel.updatePassword(*cp, user, new_pwd)){
+        responsejs["errno"] = 0;
+        responsejs["id"] = id;
+        responsejs["name"] = name;
+        responsejs["password"] = new_pwd;
+        responsejs["picture"] = js["picture"];
+    }
+    else{
+        responsejs["errno"] = 1;
+    }
+    conn->send(responsejs.dump());
 }
 
 // 一对一聊天业务
@@ -187,7 +244,8 @@ void ChatService::addFriend(const TcpConnectionPtr& conn, json& js, Timestamp ti
     addMsgToA["msgid"] = ADD_FRIEND_ACK;
     // addMsgToA["id"] = userid;
     addMsgToA["friendid"] = friendid;
-    addMsgToA["friendname"] = _userModel.query(*cp, friendid).getName();
+    User userB = _userModel.query(*cp, friendid);
+    addMsgToA["friendname"] = userB.getName();
     
     // 发送回加好友方
     conn->send(addMsgToA.dump());
@@ -196,7 +254,8 @@ void ChatService::addFriend(const TcpConnectionPtr& conn, json& js, Timestamp ti
     addMsgToB["msgid"] = ADD_FRIEND_ACK;
     // addMsgToB["id"] = friendid;
     addMsgToB["friendid"] = userid;
-    addMsgToB["friendname"] = _userModel.query(*cp, userid).getName();
+    User userA = _userModel.query(*cp, userid);
+    addMsgToB["friendname"] = userA.getName();
 
     // 查看好友是否在线并发送通知
     auto it = _userConnectionMap.find(friendid);
@@ -365,6 +424,24 @@ void ChatService::quitGroup(const TcpConnectionPtr& conn, json& js, Timestamp ti
     responsejs["msgid"] = QUIT_GROUP_ACK;
     responsejs["users"] = userStrings;
     conn->send(responsejs.dump());
+}
+
+// 处理头像变更业务
+void ChatService::modifyPicture(const TcpConnectionPtr& conn, json& js, Timestamp time){
+    int id = js["id"];
+    User user(id);
+    json responsejs;
+    lock_guard<mutex> lock(_connMutex);
+    responsejs["id"] = id;
+    responsejs["msgid"] = MODIFY_PICTURE_ACK;
+    // 获取所有在线好友信息
+    vector<User> friends = _friendModel.query(*cp, id);
+    for(User f : friends){
+        if(f.getState() == "offline") continue;
+        auto it = _userConnectionMap.find(f.getId());
+        if(it == _userConnectionMap.end()) continue;
+        it->second->send(responsejs.dump());
+    }
 }
 
 // 获取消息对应的处理器

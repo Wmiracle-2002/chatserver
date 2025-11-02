@@ -35,6 +35,12 @@ public:
     void login(const TcpConnectionPtr& conn, json& js, Timestamp time);
     // 处理注册业务
     void reg(const TcpConnectionPtr& conn, json& js, Timestamp time);
+    // 处理修改用户名业务
+    void modifyUsername(const TcpConnectionPtr& conn, json& js, Timestamp time);
+    // 处理修改密码业务
+    void modifyPassword(const TcpConnectionPtr& conn, json& js, Timestamp time);
+    // 处理头像变更业务
+    void modifyPicture(const TcpConnectionPtr& conn, json& js, Timestamp time);
     // 一对一聊天业务
     void oneChat(const TcpConnectionPtr& conn, json& js, Timestamp time);
     // 添加好友业务

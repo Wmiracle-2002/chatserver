@@ -55,7 +55,7 @@ include src/client/CMakeFiles/QChat_autogen.dir/progress.make
 
 src/client/CMakeFiles/QChat_autogen:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wmiracle/Codes/chatserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target QChat"
-	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/cmake -E cmake_autogen /home/wmiracle/Codes/chatserver/build/src/client/CMakeFiles/QChat_autogen.dir/AutogenInfo.json Debug
+	cd /home/wmiracle/Codes/chatserver/build/src/client && /usr/bin/cmake -E cmake_autogen /home/wmiracle/Codes/chatserver/build/src/client/CMakeFiles/QChat_autogen.dir/AutogenInfo.json ""
 
 QChat_autogen: src/client/CMakeFiles/QChat_autogen
 QChat_autogen: src/client/CMakeFiles/QChat_autogen.dir/build.make

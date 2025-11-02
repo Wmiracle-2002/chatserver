@@ -9,6 +9,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/wmiracle/Codes/chatserver/src/client/loginwidget.cpp" "/home/wmiracle/Codes/chatserver/build/src/client/CMakeFiles/QChat.dir/loginwidget.cpp.o"
   "/home/wmiracle/Codes/chatserver/src/client/main.cpp" "/home/wmiracle/Codes/chatserver/build/src/client/CMakeFiles/QChat.dir/main.cpp.o"
   "/home/wmiracle/Codes/chatserver/src/client/mainchatwindow.cpp" "/home/wmiracle/Codes/chatserver/build/src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.o"
+  "/home/wmiracle/Codes/chatserver/src/client/modifywidget.cpp" "/home/wmiracle/Codes/chatserver/build/src/client/CMakeFiles/QChat.dir/modifywidget.cpp.o"
+  "/home/wmiracle/Codes/chatserver/src/client/picturemanager.cpp" "/home/wmiracle/Codes/chatserver/build/src/client/CMakeFiles/QChat.dir/picturemanager.cpp.o"
   "/home/wmiracle/Codes/chatserver/src/client/registerwidget.cpp" "/home/wmiracle/Codes/chatserver/build/src/client/CMakeFiles/QChat.dir/registerwidget.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
@@ -18,6 +20,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
   "QT_CORE_LIB"
   "QT_GUI_LIB"
   "QT_NETWORK_LIB"
+  "QT_NO_DEBUG"
   "QT_WIDGETS_LIB"
   )
 

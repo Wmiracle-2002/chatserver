@@ -24,6 +24,8 @@ set(H_FILES
     ../../include/client/loginwidget.h
     ../../include/client/registerwidget.h
     ../../include/client/mainchatwindow.h
+    ../../include/client/modifywidget.h
+    ../../include/client/picturemanager.h
 )
 
 # 设置项目ui文件
@@ -31,6 +33,7 @@ set(UI_FILES
     loginwidget.ui
     registerwidget.ui
     mainchatwindow.ui
+    modifywidget.ui
 )
 
 # 设置项目源文件
@@ -40,10 +43,16 @@ set(PROJECT_SOURCES
     clientcore.cpp
     registerwidget.cpp
     mainchatwindow.cpp
+    modifywidget.cpp
+    picturemanager.cpp
     ${UI_FILES}
     ${H_FILES}
     ${TS_FILES}
 )
+
+if(WIN32)
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
+endif()
 
 # 根据Qt版本创建可执行目标
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6) # >=Qt6
@@ -88,16 +97,15 @@ elseif(APPLE)
     endif()
 endif()
 
-# 链接Qt库
-# target_link_libraries(QChat PRIVATE Qt${QT_VERSION_MAJOR}::Widgets pthread)
-
+if(UNIX)
+    target_link_libraries(QChat PRIVATE pthread)
+endif()
 # 链接Qt库 - 确保包含Network
 target_link_libraries(QChat PRIVATE
-    Qt${QT_VERSION_MAJOR}::Widgets pthread
+    Qt${QT_VERSION_MAJOR}::Widgets
     Qt${QT_VERSION_MAJOR}::Core 
     Qt${QT_VERSION_MAJOR}::Widgets 
     Qt${QT_VERSION_MAJOR}::Network  # 关键：添加Network模块
-    pthread
 )
 
 # 设置目标属性

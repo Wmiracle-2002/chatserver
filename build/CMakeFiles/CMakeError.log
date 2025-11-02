@@ -1,21 +1,21 @@
 Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/wmiracle/Codes/chatserver/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_07624/fast && /usr/bin/make -f CMakeFiles/cmTC_07624.dir/build.make CMakeFiles/cmTC_07624.dir/build
+Run Build Command(s):/usr/bin/make cmTC_5b1f2/fast && /usr/bin/make -f CMakeFiles/cmTC_5b1f2.dir/build.make CMakeFiles/cmTC_5b1f2.dir/build
 make[1]: Entering directory '/home/wmiracle/Codes/chatserver/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_07624.dir/src.cxx.o
-/usr/bin/g++    -DCMAKE_HAVE_LIBC_PTHREAD   -std=gnu++17 -o CMakeFiles/cmTC_07624.dir/src.cxx.o -c /home/wmiracle/Codes/chatserver/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_07624
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_07624.dir/link.txt --verbose=1
-/usr/bin/g++   -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_07624.dir/src.cxx.o  -o cmTC_07624 
-/usr/bin/ld: CMakeFiles/cmTC_07624.dir/src.cxx.o: in function `main':
+Building CXX object CMakeFiles/cmTC_5b1f2.dir/src.cxx.o
+/usr/bin/c++    -DCMAKE_HAVE_LIBC_PTHREAD   -std=gnu++17 -o CMakeFiles/cmTC_5b1f2.dir/src.cxx.o -c /home/wmiracle/Codes/chatserver/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_5b1f2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5b1f2.dir/link.txt --verbose=1
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_5b1f2.dir/src.cxx.o  -o cmTC_5b1f2 
+/usr/bin/ld: CMakeFiles/cmTC_5b1f2.dir/src.cxx.o: in function `main':
 src.cxx:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.cxx:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.cxx:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_07624.dir/build.make:87: cmTC_07624] Error 1
+make[1]: *** [CMakeFiles/cmTC_5b1f2.dir/build.make:87: cmTC_5b1f2] Error 1
 make[1]: Leaving directory '/home/wmiracle/Codes/chatserver/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_07624/fast] Error 2
+make: *** [Makefile:121: cmTC_5b1f2/fast] Error 2
 
 
 Source file was:

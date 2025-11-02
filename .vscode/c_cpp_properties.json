@@ -96,6 +96,8 @@
                 "/home/wmiracle/Qt/6.8.3/gcc_64/include/QtQDocCatchConversions",
                 "/home/wmiracle/Qt/6.8.3/gcc_64/include/QtLabsFolderListModel",
                 "/home/wmiracle/Codes/chatserver/include/client",
+                "/home/wmiracle/Codes/chatserver/include/server",
+                "/home/wmiracle/Codes/chatserver/include/common",
                 "${workspaceFolder}/**"
             ],
             "defines": [],

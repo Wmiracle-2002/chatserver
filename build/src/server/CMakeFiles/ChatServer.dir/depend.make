@@ -39,6 +39,12 @@ src/server/CMakeFiles/ChatServer.dir/db/connpool.cpp.o: ../src/server/db/connpoo
 src/server/CMakeFiles/ChatServer.dir/db/mysqlconn.cpp.o: ../include/server/db/mysqlconn.h
 src/server/CMakeFiles/ChatServer.dir/db/mysqlconn.cpp.o: ../src/server/db/mysqlconn.cpp
 
+src/server/CMakeFiles/ChatServer.dir/httpserver.cpp.o: ../include/server/httpserver.hpp
+src/server/CMakeFiles/ChatServer.dir/httpserver.cpp.o: ../include/server/picturehandler.hpp
+src/server/CMakeFiles/ChatServer.dir/httpserver.cpp.o: ../thirdparty/httplib.h
+src/server/CMakeFiles/ChatServer.dir/httpserver.cpp.o: ../thirdparty/json.hpp
+src/server/CMakeFiles/ChatServer.dir/httpserver.cpp.o: ../src/server/httpserver.cpp
+
 src/server/CMakeFiles/ChatServer.dir/main.cpp.o: ../include/common/group.hpp
 src/server/CMakeFiles/ChatServer.dir/main.cpp.o: ../include/common/groupuser.hpp
 src/server/CMakeFiles/ChatServer.dir/main.cpp.o: ../include/common/user.hpp
@@ -46,11 +52,13 @@ src/server/CMakeFiles/ChatServer.dir/main.cpp.o: ../include/server/chatserver.hp
 src/server/CMakeFiles/ChatServer.dir/main.cpp.o: ../include/server/chatservice.hpp
 src/server/CMakeFiles/ChatServer.dir/main.cpp.o: ../include/server/db/connpool.h
 src/server/CMakeFiles/ChatServer.dir/main.cpp.o: ../include/server/db/mysqlconn.h
+src/server/CMakeFiles/ChatServer.dir/main.cpp.o: ../include/server/httpserver.hpp
 src/server/CMakeFiles/ChatServer.dir/main.cpp.o: ../include/server/model/friendmodel.hpp
 src/server/CMakeFiles/ChatServer.dir/main.cpp.o: ../include/server/model/groupmodel.hpp
 src/server/CMakeFiles/ChatServer.dir/main.cpp.o: ../include/server/model/offlinemsgmodel.hpp
 src/server/CMakeFiles/ChatServer.dir/main.cpp.o: ../include/server/model/usermodel.hpp
 src/server/CMakeFiles/ChatServer.dir/main.cpp.o: ../include/server/redis/redis.hpp
+src/server/CMakeFiles/ChatServer.dir/main.cpp.o: ../thirdparty/httplib.h
 src/server/CMakeFiles/ChatServer.dir/main.cpp.o: ../thirdparty/json.hpp
 src/server/CMakeFiles/ChatServer.dir/main.cpp.o: ../src/server/main.cpp
 
@@ -82,6 +90,11 @@ src/server/CMakeFiles/ChatServer.dir/model/usermodel.cpp.o: ../include/server/db
 src/server/CMakeFiles/ChatServer.dir/model/usermodel.cpp.o: ../include/server/model/usermodel.hpp
 src/server/CMakeFiles/ChatServer.dir/model/usermodel.cpp.o: ../thirdparty/json.hpp
 src/server/CMakeFiles/ChatServer.dir/model/usermodel.cpp.o: ../src/server/model/usermodel.cpp
+
+src/server/CMakeFiles/ChatServer.dir/picturehandler.cpp.o: ../include/common/public.hpp
+src/server/CMakeFiles/ChatServer.dir/picturehandler.cpp.o: ../include/server/picturehandler.hpp
+src/server/CMakeFiles/ChatServer.dir/picturehandler.cpp.o: ../thirdparty/json.hpp
+src/server/CMakeFiles/ChatServer.dir/picturehandler.cpp.o: ../src/server/picturehandler.cpp
 
 src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: ../include/server/redis/redis.hpp
 src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: ../src/server/redis/redis.cpp

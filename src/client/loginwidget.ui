@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Register</string>
+    <string>注册</string>
    </property>
   </widget>
   <widget class="QPushButton" name="loginButton">
@@ -36,7 +36,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Login</string>
+    <string>登录</string>
    </property>
   </widget>
   <widget class="QLabel" name="QChatLabel">
@@ -68,12 +68,15 @@
     <rect>
      <x>50</x>
      <y>130</y>
-     <width>81</width>
+     <width>71</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>username:</string>
+    <string>账号：</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="passwordLable">
@@ -81,12 +84,15 @@
     <rect>
      <x>50</x>
      <y>170</y>
-     <width>81</width>
+     <width>71</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>password:</string>
+    <string>密码：</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="usernameEdit">

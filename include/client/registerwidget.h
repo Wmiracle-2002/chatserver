@@ -15,7 +15,8 @@ class RegisterWidget : public QWidget
 public:
     explicit RegisterWidget(ClientCore* clientCore, QWidget *parent = nullptr);
     ~RegisterWidget();
-
+    void onRegistrationSuccess(int id);
+    void onRegistrationFailed(QString errorMsg);
 private slots:
     void on_registerButton_clicked();
 

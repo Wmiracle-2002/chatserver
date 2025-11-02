@@ -5,6 +5,9 @@
 #include <iostream>
 #include <QMenu>
 #include <QMessageBox>
+#include <QDir>
+#include <QStandardPaths>
+#include "modifywidget.h"
 
 // 获取系统时间（聊天信息需要添加时间信息）
 string getCurrentTime(){
@@ -18,15 +21,18 @@ string getCurrentTime(){
 MainChatWindow::MainChatWindow(ClientCore* clientCore, QWidget *parent)
     : QMainWindow(parent)
     , m_clientCore(clientCore)
+    , m_pm(new PictureManager(m_clientCore))
     , ui(new Ui::MainChatWindow)
 {
     ui->setupUi(this);
     // 设置上下文菜单策略
     ui->friendWidget->setContextMenuPolicy(Qt::CustomContextMenu);
     ui->groupWidget->setContextMenuPolicy(Qt::CustomContextMenu);
+    ui->pictureLabel->setContextMenuPolicy(Qt::CustomContextMenu);
     // 连接自定义上下文菜单请求信号到槽函数
     connect(ui->friendWidget, &QListWidget::customContextMenuRequested, this, &MainChatWindow::onFriendWidgetContextMenuRequested);
     connect(ui->groupWidget, &QListWidget::customContextMenuRequested, this, &MainChatWindow::onGroupWidgetContextMenuRequested);
+    connect(ui->pictureLabel, &QLabel::customContextMenuRequested, this, &MainChatWindow::onPictureLabelContextMenuRequested);
     connect(ui->lineEdit, &QLineEdit::returnPressed, this, &MainChatWindow::transferText);
     connect(ui->friendWidget, &QListWidget::itemClicked, this, &MainChatWindow::onFriendClicked);
     connect(ui->groupWidget, &QListWidget::itemClicked, this, &MainChatWindow::onGroupClicked);
@@ -39,10 +45,25 @@ MainChatWindow::MainChatWindow(ClientCore* clientCore, QWidget *parent)
     connect(clientCore, &ClientCore::groupAdded, this, &MainChatWindow::onGroupAdded);
     connect(clientCore, &ClientCore::friendInfo, this, &MainChatWindow::showInfo);
     connect(clientCore, &ClientCore::groupInfo, this, &MainChatWindow::showInfo);
-    // qDebug() << "[UI] connect offline msg result=" 
-    //      << connect(clientCore, &ClientCore::recvOfflineMsg,
-    //                 this, &MainChatWindow::onOfflineMsg);
+    connect(clientCore, &ClientCore::refreshUserInfo, this, &MainChatWindow::showUserInfo);
+    connect(clientCore, &ClientCore::pictureChanged, this, &MainChatWindow::onServerNotifyPictureChanged);
+
+    connect(m_pm, &PictureManager::pictureDownloaded, this, &MainChatWindow::onPictureDownloaded);
+
     ui->sendButton->setDefault(true);
+
+    QString id = QString::number(m_clientCore->g_currentUser.getId());
+    // 删除该用户的头像缓存
+    m_pm->deleteCachedPicture(id);
+    // 立即重新下载新头像
+    m_pm->downloadPicture(id);
+    for(auto user : m_clientCore->g_currentUserFriendList){
+        QString userid = QString::number(user.getId());
+        // 删除该用户的头像缓存
+        m_pm->deleteCachedPicture(userid);
+        // 立即重新下载新头像
+        m_pm->downloadPicture(userid);
+    }
 }
 
 MainChatWindow::~MainChatWindow()
@@ -107,6 +128,17 @@ void MainChatWindow::on_creategroupButton_clicked()
 void MainChatWindow::on_tabWidget_currentChanged(int index)
 {
     (m_index = index) == 0 ? fillFriendList() : fillGroupList();
+}
+
+void MainChatWindow::onServerNotifyPictureChanged(const json &js)
+{
+    int id = js["id"];
+    qDebug() << "收到服务器头像变更通知，用户ID:" << id;
+    
+    // 删除该用户的头像缓存
+    m_pm->deleteCachedPicture(QString::number(id));
+    // 立即重新下载新头像
+    m_pm->downloadPicture(QString::number(id));
 }
 
 void MainChatWindow::onFriendWidgetContextMenuRequested(const QPoint &pos)
@@ -192,6 +224,22 @@ void MainChatWindow::onGroupWidgetContextMenuRequested(const QPoint &pos)
     }
 }
 
+void MainChatWindow::onPictureLabelContextMenuRequested(const QPoint &pos)
+{
+    // 创建菜单
+    QMenu menu(this);
+    QAction *modifyAction = menu.addAction("modify information");
+    
+    // 显示菜单，并获取用户选择的动作
+    // 注意需要将控件内的坐标转换为全局坐标
+    QAction *selectedAction = menu.exec(ui->pictureLabel->mapToGlobal(pos));
+    if(selectedAction == modifyAction){
+        ModifyWidget* modifyWidget = new ModifyWidget(m_clientCore);
+        modifyWidget->setAttribute(Qt::WA_DeleteOnClose); // 关闭时自动删除
+        modifyWidget->show();
+    }
+}
+
 void MainChatWindow::onGroupDissolved(int groupid)
 {
     QString groupid_str = QString::number(groupid);
@@ -244,9 +292,19 @@ void MainChatWindow::onFriendDeleted(int friendid)
 
 void MainChatWindow::onFriendAdded(int id, string name)
 {
-    // 1. 从数据中添加
-    m_friendList.insert(QString::number(id), QString::fromStdString(name));
-    // 2. 刷新列表
+    qDebug() << "有好友修改了信息";
+    // 好友信息修改后，这里进行更新（即移除原信息，添加新信息）
+    QMetaObject::invokeMethod(this, [this, id, name]() {
+        // 从本地好友列表中移除
+        auto& friends = m_clientCore->g_currentUserFriendList;
+        friends.erase(std::remove_if(friends.begin(), friends.end(), [id](User user) {return user.getId() == id;}), friends.end());
+        // 更改后的好友添加到本地好友列表
+        User user;
+        user.setId(id);
+        user.setName(name);
+        m_clientCore->g_currentUserFriendList.push_back(user);
+    }, Qt::QueuedConnection);
+    // 刷新列表
     fillFriendList();
 }
 
@@ -270,6 +328,37 @@ void MainChatWindow::onGroupClicked(QListWidgetItem *item)
     m_item = item;
     QString gid = item->data(Qt::UserRole).toString();
     loadConversation(gid);
+}
+
+void MainChatWindow::onPictureDownloaded(const QString& userid, const QPixmap& picture)
+{
+    // 更新当前用户头像
+    QString currentUserId = QString::number(m_clientCore->g_currentUser.getId());
+    if (userid == currentUserId && !picture.isNull()) {
+        m_pm->showPicture(picture, ui->pictureLabel);
+    }
+    // 更新好友列表头像
+    for (int i = 0; i < ui->friendWidget->count(); i++) {
+        QListWidgetItem *item = ui->friendWidget->item(i);
+        QString itemUserId = item->data(Qt::UserRole).toString();
+
+        if (itemUserId == userid) {
+            m_pm->showPicture(picture, item);
+            break;
+        }
+    }
+}
+
+void MainChatWindow::showUserInfo()
+{
+    int id = m_clientCore->g_currentUser.getId();
+    string name = m_clientCore->g_currentUser.getName();
+    QString showid = QString::fromStdString("账号：") + QString::number(id);
+    QString showname = QString::fromStdString("昵称：" + name);
+    // 加载原图
+    m_pm->downloadPicture(QString::number(id));
+    ui->idLabel->setText(showid);
+    ui->nameLabel->setText(showname);
 }
 
 void MainChatWindow::transferText()
@@ -347,10 +436,17 @@ void MainChatWindow::fillFriendList()
     for (QMap<QString, QString>::iterator it = m_friendList.begin(); it != m_friendList.end(); ++it) {
         // 1. 创建 item
         QListWidgetItem *item = new QListWidgetItem(ui->friendWidget);
+    
+        // 2. 设置信息
         item->setText(it.value());
         item->setData(Qt::UserRole, it.key());   // 后面点 item 能取到 uid
-        // 2. 大小
-        item->setSizeHint(QSize(0, 48));      // 固定 48 px 高
+        item->setSizeHint(QSize(0, 48));
+        for(User user : m_clientCore->g_currentUserFriendList){ // 获取好友头像
+            if(QString::number(user.getId()) == it.key()){
+                m_pm->downloadPicture(it.key());
+                break;
+            }
+        }
     }
 }
 

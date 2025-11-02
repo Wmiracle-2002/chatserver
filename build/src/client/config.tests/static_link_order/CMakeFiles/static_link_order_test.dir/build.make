@@ -60,15 +60,15 @@ include CMakeFiles/static_link_order_test.dir/flags.make
 CMakeFiles/static_link_order_test.dir/main.cpp.o: CMakeFiles/static_link_order_test.dir/flags.make
 CMakeFiles/static_link_order_test.dir/main.cpp.o: /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmiracle/Codes/chatserver/build/src/client/config.tests/static_link_order/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/static_link_order_test.dir/main.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/static_link_order_test.dir/main.cpp.o -c /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/main.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/static_link_order_test.dir/main.cpp.o -c /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/main.cpp
 
 CMakeFiles/static_link_order_test.dir/main.cpp.i: cmake_force
 	@echo "Preprocessing CXX source to CMakeFiles/static_link_order_test.dir/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/main.cpp > CMakeFiles/static_link_order_test.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/main.cpp > CMakeFiles/static_link_order_test.dir/main.cpp.i
 
 CMakeFiles/static_link_order_test.dir/main.cpp.s: cmake_force
 	@echo "Compiling CXX source to assembly CMakeFiles/static_link_order_test.dir/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/main.cpp -o CMakeFiles/static_link_order_test.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/main.cpp -o CMakeFiles/static_link_order_test.dir/main.cpp.s
 
 # Object files for target static_link_order_test
 static_link_order_test_OBJECTS = \

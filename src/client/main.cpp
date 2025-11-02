@@ -24,9 +24,15 @@ int main(int argc, char *argv[])
         }
     }
     
+    // 设置应用程序信息（影响AppDataLocation路径）
+    QApplication::setOrganizationName("Wmiracle");
+    QApplication::setOrganizationDomain("wmiracle.com");
+    QApplication::setApplicationName("QChat");
+
     // 创建核心网络组件
     ClientCore *clientCore = new ClientCore;
-    clientCore->connectToServer("192.168.253.129", 8000);
+    clientCore->connectToServer("127.0.0.1", 8000);
+    // clientCore->connectToServer("47.111.168.1", 8000);
     // 创建登录界面，传入核心网络对象
     LoginWidget loginWidget(clientCore);
     loginWidget.show();
@@ -40,6 +46,7 @@ int main(int argc, char *argv[])
         
         mWindow->show();
         clientCore->doLoginResponse(js);
+        emit clientCore->refreshUserInfo();
         mWindow->fillFriendList();
     });
     

@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>1</y>
-      <width>237</width>
-      <height>571</height>
+      <y>50</y>
+      <width>241</width>
+      <height>521</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="itemLayout">
@@ -43,26 +43,26 @@
          <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
         </property>
         <attribute name="title">
-         <string>Tab 1</string>
+         <string>我的好友</string>
         </attribute>
         <widget class="QPushButton" name="addfriendButton">
          <property name="geometry">
           <rect>
            <x>140</x>
-           <y>510</y>
+           <y>460</y>
            <width>91</width>
            <height>25</height>
           </rect>
          </property>
          <property name="text">
-          <string>addfriend</string>
+          <string>添加好友</string>
          </property>
         </widget>
         <widget class="QLineEdit" name="addfriendEdit">
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>510</y>
+           <y>460</y>
            <width>141</width>
            <height>25</height>
           </rect>
@@ -74,20 +74,20 @@
            <x>0</x>
            <y>0</y>
            <width>231</width>
-           <height>511</height>
+           <height>451</height>
           </rect>
          </property>
         </widget>
        </widget>
        <widget class="QWidget" name="Group">
         <attribute name="title">
-         <string>Tab 2</string>
+         <string>我的群组</string>
         </attribute>
         <widget class="QLineEdit" name="addgroupEdit">
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>510</y>
+           <y>460</y>
            <width>141</width>
            <height>25</height>
           </rect>
@@ -97,33 +97,33 @@
          <property name="geometry">
           <rect>
            <x>140</x>
-           <y>510</y>
+           <y>460</y>
            <width>91</width>
            <height>25</height>
           </rect>
          </property>
          <property name="text">
-          <string>addgroup</string>
+          <string>加入群组</string>
          </property>
         </widget>
         <widget class="QPushButton" name="creategroupButton">
          <property name="geometry">
           <rect>
            <x>140</x>
-           <y>480</y>
+           <y>430</y>
            <width>91</width>
            <height>25</height>
           </rect>
          </property>
          <property name="text">
-          <string>creategroup</string>
+          <string>创建群组</string>
          </property>
         </widget>
         <widget class="QLineEdit" name="creategroupEdit">
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>480</y>
+           <y>430</y>
            <width>141</width>
            <height>25</height>
           </rect>
@@ -135,7 +135,7 @@
            <x>0</x>
            <y>0</y>
            <width>231</width>
-           <height>481</height>
+           <height>421</height>
           </rect>
          </property>
         </widget>
@@ -192,7 +192,72 @@
       </rect>
      </property>
      <property name="text">
-      <string>Send</string>
+      <string>发送</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="userinfo" native="true">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>0</y>
+      <width>181</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="idLabel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>181</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="nameLabel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>25</y>
+       <width>181</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="profile" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>50</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="pictureLabel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>50</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
    </widget>

@@ -280,6 +280,33 @@ db/mysqlconn.cpp.s:
 	cd /home/wmiracle/Codes/chatserver/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/db/mysqlconn.cpp.s
 .PHONY : db/mysqlconn.cpp.s
 
+httpserver.o: httpserver.cpp.o
+
+.PHONY : httpserver.o
+
+# target to build an object file
+httpserver.cpp.o:
+	cd /home/wmiracle/Codes/chatserver/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/httpserver.cpp.o
+.PHONY : httpserver.cpp.o
+
+httpserver.i: httpserver.cpp.i
+
+.PHONY : httpserver.i
+
+# target to preprocess a source file
+httpserver.cpp.i:
+	cd /home/wmiracle/Codes/chatserver/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/httpserver.cpp.i
+.PHONY : httpserver.cpp.i
+
+httpserver.s: httpserver.cpp.s
+
+.PHONY : httpserver.s
+
+# target to generate assembly for a file
+httpserver.cpp.s:
+	cd /home/wmiracle/Codes/chatserver/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/httpserver.cpp.s
+.PHONY : httpserver.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -415,6 +442,33 @@ model/usermodel.cpp.s:
 	cd /home/wmiracle/Codes/chatserver/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/model/usermodel.cpp.s
 .PHONY : model/usermodel.cpp.s
 
+picturehandler.o: picturehandler.cpp.o
+
+.PHONY : picturehandler.o
+
+# target to build an object file
+picturehandler.cpp.o:
+	cd /home/wmiracle/Codes/chatserver/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/picturehandler.cpp.o
+.PHONY : picturehandler.cpp.o
+
+picturehandler.i: picturehandler.cpp.i
+
+.PHONY : picturehandler.i
+
+# target to preprocess a source file
+picturehandler.cpp.i:
+	cd /home/wmiracle/Codes/chatserver/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/picturehandler.cpp.i
+.PHONY : picturehandler.cpp.i
+
+picturehandler.s: picturehandler.cpp.s
+
+.PHONY : picturehandler.s
+
+# target to generate assembly for a file
+picturehandler.cpp.s:
+	cd /home/wmiracle/Codes/chatserver/build && $(MAKE) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/picturehandler.cpp.s
+.PHONY : picturehandler.cpp.s
+
 redis/redis.o: redis/redis.cpp.o
 
 .PHONY : redis/redis.o
@@ -467,6 +521,9 @@ help:
 	@echo "... db/mysqlconn.o"
 	@echo "... db/mysqlconn.i"
 	@echo "... db/mysqlconn.s"
+	@echo "... httpserver.o"
+	@echo "... httpserver.i"
+	@echo "... httpserver.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -482,6 +539,9 @@ help:
 	@echo "... model/usermodel.o"
 	@echo "... model/usermodel.i"
 	@echo "... model/usermodel.s"
+	@echo "... picturehandler.o"
+	@echo "... picturehandler.i"
+	@echo "... picturehandler.s"
 	@echo "... redis/redis.o"
 	@echo "... redis/redis.i"
 	@echo "... redis/redis.s"

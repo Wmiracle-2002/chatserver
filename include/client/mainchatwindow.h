@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QListWidgetItem>
 #include "clientcore.h"
+#include "picturemanager.h"
 
 // 消息结构
 struct Message {
@@ -29,6 +30,7 @@ public:
     void fillGroupList();
     void loadConversation(QString id);
     void showInfo(const QString& type, const QString& title, const QString& msg);
+    void showUserInfo();
     void chat(QString time, QString msg);
     void groupchat(QString time, QString msg);
     void addfriend(QString uid);
@@ -43,12 +45,17 @@ private slots:
     void on_addgroupButton_clicked();
     void on_creategroupButton_clicked();
     void on_tabWidget_currentChanged(int index);
+    void onServerNotifyPictureChanged(const json &js);
     void onFriendWidgetContextMenuRequested(const QPoint &pos);
     void onGroupWidgetContextMenuRequested(const QPoint &pos);
+    void onPictureLabelContextMenuRequested(const QPoint &pos);
     void onGroupDissolved(int groupid);
     void onFriendDeleted(int friendid);
     void onFriendAdded(int id, string name);
     void onGroupAdded(int id, string name);
+    // void onPictureReceived(const QString& userid, const QPixmap& picture);
+    void onPictureDownloaded(const QString& userid, const QPixmap& picture);
+    // void onPictureUploaded(bool success, const QString& message);
     void transferText();
     void onFriendClicked(QListWidgetItem *item);
     void onGroupClicked(QListWidgetItem *item);
@@ -59,6 +66,7 @@ private:
     int m_index;    // 区分单聊/群聊页面
     Ui::MainChatWindow *ui;
     ClientCore* m_clientCore; // 添加核心网络对象指针
+    PictureManager* m_pm;
     QListWidgetItem* m_item;
     QMap<QString, QString> m_friendList;
     QMap<QString, QString> m_groupList;

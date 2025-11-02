@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/QChat.dir/loginwidget.cpp.o"
   "CMakeFiles/QChat.dir/main.cpp.o"
   "CMakeFiles/QChat.dir/mainchatwindow.cpp.o"
+  "CMakeFiles/QChat.dir/modifywidget.cpp.o"
+  "CMakeFiles/QChat.dir/picturemanager.cpp.o"
   "CMakeFiles/QChat.dir/registerwidget.cpp.o"
 )
 

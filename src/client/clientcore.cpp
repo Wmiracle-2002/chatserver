@@ -128,9 +128,9 @@ void ClientCore::doAddFriendResponse(const json &responsejs){
         User user;
         int friendid = responsejs["friendid"];
         string friendname = responsejs["friendname"];
+        string friendpicture = responsejs["friendpicture"];
         user.setId(friendid);
         user.setName(friendname);
-        g_currentUserFriendList.push_back(user);
         emit friendAdded(g_currentUser.getId(), g_currentUser.getName());
         title = "添加好友成功";
         msg = "可以开始和该好友进行聊天啦";
@@ -348,8 +348,8 @@ void ClientCore::readTaskHandler()
             
             if (LOGIN_MSG_ACK == msgtype) {
                 if (0 == js["errno"].get<int>()) {
-                    emit loginSuccess(js);
                     // doLoginResponse(js);
+                    emit loginSuccess(js);
                 } else {
                     emit loginFailed(QString::fromStdString(js["errmsg"].get<std::string>()));
                 }
@@ -358,7 +358,8 @@ void ClientCore::readTaskHandler()
                 if (0 == js["errno"].get<int>()) {
                     emit registrationSuccess(js["id"].get<int>());
                 } else {
-                    emit registrationFailed("Registration failed");
+                    QString errorMsg = QString::fromStdString(js["errmsg"].get<std::string>());
+                    emit registrationFailed(errorMsg);
                 }
             }
             else if (ADD_FRIEND_ACK == msgtype) {
@@ -388,14 +389,25 @@ void ClientCore::readTaskHandler()
             }
             else if (ONE_CHAT_MSG == msgtype) {
                 emit recvOneChatMsg(js);
-                // cout << js["time"].get<string>() << " [" << js["id"] << "]" << js["name"].get<string>()
-                //      << " said: " << js["msg"].get<string>() << endl;
                 continue;
             }
             else if (GROUP_CHAT_MSG == msgtype) {
                 emit recvGroupChatMsg(js);
-                // cout << "群消息[" << js["groupid"] << "]:" << js["time"].get<string>() << " [" << js["id"] << "]" << js["name"].get<string>()
-                //     << " said: " << js["msg"].get<string>() << endl;
+                continue;
+            }
+            else if (MODIFY_NAME_ACK == msgtype) {
+                emit nameModified(js);
+                continue;
+            }
+            else if (MODIFY_PASSWORD_ACK == msgtype) {
+                emit passwordModified(js);
+                continue;
+            }
+            else if (MODIFY_PICTURE_ACK == msgtype) {
+                emit pictureChanged(js);
+            }
+            else if (FRIEND_INFO_CHANGED == msgtype) {
+                emit friendAdded(js["id"], js["name"]);
                 continue;
             }
         } catch (...) {
@@ -441,27 +453,4 @@ void ClientCore::registerUser(const QString &name, const QString &password)
     js["name"] = name.toStdString();
     js["password"] = password.toStdString();
     sendJson(js);
-}
-
-json ClientCore::getRegSuccessMsg()
-{
-    char buffer[1024] = {0};
-    
-#ifdef _WIN32
-    int len = recv(m_clientfd, buffer, 1024, 0);
-    if (len == SOCKET_ERROR || len == 0){
-        closeSocket();
-        exit(-1);
-    }
-#else
-    int len = recv(m_clientfd, buffer, 1024, 0);
-    if (-1 == len || 0 == len){
-        closeSocket();
-        exit(-1);
-    }
-#endif
-
-    // 接收ChatServer转发的数据，反序列化生成json数据对象
-    json js = json::parse(buffer);
-    return js;
 }

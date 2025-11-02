@@ -88,7 +88,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g  "
+					"fragment" : " "
 				},
 				{
 					"fragment" : "-std=gnu++17"
@@ -141,7 +141,9 @@
 				6,
 				7,
 				8,
-				9
+				9,
+				10,
+				11
 			]
 		}
 	],
@@ -150,10 +152,6 @@
 	{
 		"commandFragments" : 
 		[
-			{
-				"fragment" : "-g",
-				"role" : "flags"
-			},
 			{
 				"fragment" : "",
 				"role" : "flags"
@@ -203,7 +201,9 @@
 				6,
 				7,
 				8,
-				9
+				9,
+				10,
+				11
 			]
 		}
 	],
@@ -224,7 +224,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "src/server/httpserver.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "src/server/main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/server/picturehandler.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

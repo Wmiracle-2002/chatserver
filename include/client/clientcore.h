@@ -8,6 +8,7 @@
 #include "user.hpp"
 #include "group.hpp"
 #include "json.hpp"
+#include <QNetworkAccessManager>
 
 // 平台相关的网络头文件
 #ifdef _WIN32
@@ -44,10 +45,16 @@ public:
     void doAddGroupResponse(const json &responsejs);
     void doQuitGroupResponse(const json &responsejs);
     void doDissolveGroupResponse(const json &responsejs);
+
+    // HTTP相关方法
+    void setHttpServerUrl(const QString& url) { m_httpServerUrl = url; }
+    QString getHttpServerUrl() const { return m_httpServerUrl; }
+    void uploadPicture(const QPixmap& picture);
+    void downloadPicture(int userid);
+
     // 用户操作
     void login(int id, const QString& password);
     void registerUser(const QString& name, const QString& password);
-    json getRegSuccessMsg();
 
     User g_currentUser; // 记录当前系统登录的用户信息
     vector<User> g_currentUserFriendList;   // 记录当前登录用户的好友列表信息
@@ -59,6 +66,7 @@ public:
 signals:
     void loginSuccess(const json &js);
     void loginFailed(const QString& reason);
+    void refreshUserInfo();
     void registrationSuccess(int id);
     void registrationFailed(const QString& reason);
     void recvOfflineMsg(const QString &jsStr);
@@ -71,6 +79,13 @@ signals:
     void groupAdded(int id, string name);
     void friendInfo(const QString& type, const QString& title, const QString& msg);
     void groupInfo(const QString& type, const QString& title, const QString& msg);
+    void nameModified(const json &js);
+    void passwordModified(const json &js);
+    void pictureChanged(const json &js);
+
+    // HTTP相关信号
+    void pictureUploaded(bool success, const QString& message);
+    void pictureDownloaded(const QString& userid, const QPixmap& picture);
 private:
     void readTaskHandler();
     void closeSocket();
@@ -78,7 +93,10 @@ private:
     int m_clientfd = -1;
     std::atomic_bool m_running{false};
     QThread* m_readThread = nullptr;
-    
+
+    // HTTP客户端
+    QNetworkAccessManager* m_httpClient;
+    QString m_httpServerUrl;
 #ifdef _WIN32
     static bool s_wsaInitialized;
     static void initWSA();

@@ -60,15 +60,15 @@ include CMakeFiles/objLib.dir/flags.make
 CMakeFiles/objLib.dir/objlib.cpp.o: CMakeFiles/objLib.dir/flags.make
 CMakeFiles/objLib.dir/objlib.cpp.o: /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/objlib.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmiracle/Codes/chatserver/build/src/client/config.tests/static_link_order/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/objLib.dir/objlib.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/objLib.dir/objlib.cpp.o -c /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/objlib.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/objLib.dir/objlib.cpp.o -c /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/objlib.cpp
 
 CMakeFiles/objLib.dir/objlib.cpp.i: cmake_force
 	@echo "Preprocessing CXX source to CMakeFiles/objLib.dir/objlib.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/objlib.cpp > CMakeFiles/objLib.dir/objlib.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/objlib.cpp > CMakeFiles/objLib.dir/objlib.cpp.i
 
 CMakeFiles/objLib.dir/objlib.cpp.s: cmake_force
 	@echo "Compiling CXX source to assembly CMakeFiles/objLib.dir/objlib.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/objlib.cpp -o CMakeFiles/objLib.dir/objlib.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wmiracle/Qt/6.8.3/gcc_64/lib/cmake/Qt6/config.tests/static_link_order/objlib.cpp -o CMakeFiles/objLib.dir/objlib.cpp.s
 
 objLib: CMakeFiles/objLib.dir/objlib.cpp.o
 objLib: CMakeFiles/objLib.dir/build.make

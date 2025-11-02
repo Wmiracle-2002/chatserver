@@ -5,11 +5,13 @@ file(REMOVE_RECURSE
   "CMakeFiles/ChatServer.dir/chatservice.cpp.o"
   "CMakeFiles/ChatServer.dir/db/connpool.cpp.o"
   "CMakeFiles/ChatServer.dir/db/mysqlconn.cpp.o"
+  "CMakeFiles/ChatServer.dir/httpserver.cpp.o"
   "CMakeFiles/ChatServer.dir/main.cpp.o"
   "CMakeFiles/ChatServer.dir/model/friendmodel.cpp.o"
   "CMakeFiles/ChatServer.dir/model/groupmodel.cpp.o"
   "CMakeFiles/ChatServer.dir/model/offlinemsgmodel.cpp.o"
   "CMakeFiles/ChatServer.dir/model/usermodel.cpp.o"
+  "CMakeFiles/ChatServer.dir/picturehandler.cpp.o"
   "CMakeFiles/ChatServer.dir/redis/redis.cpp.o"
 )
 

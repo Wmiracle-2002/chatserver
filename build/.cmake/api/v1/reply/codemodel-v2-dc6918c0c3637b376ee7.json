@@ -65,7 +65,7 @@
 					]
 				}
 			],
-			"name" : "Debug",
+			"name" : "",
 			"projects" : 
 			[
 				{
@@ -90,21 +90,21 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "ChatServer::@2804e40980a64c7d7ad1",
-					"jsonFile" : "target-ChatServer-Debug-a91b769ce778612acac6.json",
+					"jsonFile" : "target-ChatServer-e2860d87b5c16d59fa5a.json",
 					"name" : "ChatServer",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "QChat::@8ca63c80a879d0067daa",
-					"jsonFile" : "target-QChat-Debug-2384ae968982d81fd3a0.json",
+					"jsonFile" : "target-QChat-a75b7be3d407fb449339.json",
 					"name" : "QChat",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "QChat_autogen::@8ca63c80a879d0067daa",
-					"jsonFile" : "target-QChat_autogen-Debug-c3148b2d49e20db07a54.json",
+					"jsonFile" : "target-QChat_autogen-c3148b2d49e20db07a54.json",
 					"name" : "QChat_autogen",
 					"projectIndex" : 0
 				}

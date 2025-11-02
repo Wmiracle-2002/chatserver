@@ -5,6 +5,8 @@ src/client/CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.o
  ../include/client/clientcore.h
  ../include/client/loginwidget.h
  ../include/client/mainchatwindow.h
+ ../include/client/modifywidget.h
+ ../include/client/picturemanager.h
  ../include/client/registerwidget.h
  ../include/common/group.hpp
  ../include/common/groupuser.hpp
@@ -14,20 +16,29 @@ src/client/CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.o
  /home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/V52LERMGDR/moc_clientcore.cpp
  /home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/V52LERMGDR/moc_loginwidget.cpp
  /home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/V52LERMGDR/moc_mainchatwindow.cpp
+ /home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/V52LERMGDR/moc_modifywidget.cpp
+ /home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/V52LERMGDR/moc_picturemanager.cpp
  /home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/V52LERMGDR/moc_registerwidget.cpp
  /home/wmiracle/Codes/chatserver/build/src/client/QChat_autogen/mocs_compilation.cpp
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QFlags
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QList
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QMetaType
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QObject
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QRect
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSharedDataPointer
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSize
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSizeF
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QString
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QThread
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QUrl
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QVariant
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20functional.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20iterator.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20memory.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20type_traits.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20utility.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q23utility.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q26numeric.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qabstractitemmodel.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qalgorithms.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qanystringview.h
@@ -43,6 +54,7 @@ src/client/CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearrayalgorithms.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearraylist.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearrayview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcalendar.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qchar.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcompare.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcompare_impl.h
@@ -57,8 +69,10 @@ src/client/CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreapplication.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreapplication_platform.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreevent.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcryptographichash.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdarwinhelpers.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdatastream.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdatetime.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdeadlinetimer.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdebug.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qelapsedtimer.h
@@ -168,6 +182,7 @@ src/client/CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qversiontagging.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qxptype_traits.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qyieldcpu.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/QPixmap
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/QTransform
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qaction.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qbitmap.h
@@ -188,6 +203,8 @@ src/client/CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qkeysequence.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpaintdevice.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpalette.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpen.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpicture.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpixelformat.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpixmap.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpointingdevice.h
@@ -197,6 +214,10 @@ src/client/CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qrgba64.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qscreen.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qscreen_platform.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtextcursor.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtextdocument.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtextformat.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtextoption.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtgui-config.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtguiexports.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtguiglobal.h
@@ -205,6 +226,26 @@ src/client/CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qvector2d.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qvectornd.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qwindowdefs.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QNetworkAccessManager
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QSslConfiguration
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QSslError
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qabstractsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qhostaddress.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qhttpheaders.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qnetworkaccessmanager.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qnetworkrequest.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qssl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslcertificate.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslconfiguration.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslerror.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtcpsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetwork-config.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetworkexports.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetworkglobal.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QLabel
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QListWidgetItem
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QMainWindow
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QWidget
@@ -214,6 +255,7 @@ src/client/CMakeFiles/QChat.dir/QChat_autogen/mocs_compilation.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qabstractslider.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qabstractspinbox.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qframe.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlabel.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlistview.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlistwidget.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qmainwindow.h
@@ -237,19 +279,26 @@ src/client/CMakeFiles/QChat.dir/clientcore.cpp.o
  ../thirdparty/json.hpp
  /home/wmiracle/Codes/chatserver/src/client/clientcore.cpp
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QDebug
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QFlags
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QList
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QMetaObject
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QMetaType
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QObject
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QRect
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSharedDataPointer
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSize
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSizeF
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QString
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QThread
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QUrl
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QVariant
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20functional.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20iterator.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20memory.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20type_traits.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20utility.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q23utility.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q26numeric.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qalgorithms.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qanystringview.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qarraydata.h
@@ -264,6 +313,7 @@ src/client/CMakeFiles/QChat.dir/clientcore.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearrayalgorithms.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearraylist.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearrayview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcalendar.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qchar.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcompare.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcompare_impl.h
@@ -278,8 +328,10 @@ src/client/CMakeFiles/QChat.dir/clientcore.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreapplication.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreapplication_platform.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreevent.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcryptographichash.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdarwinhelpers.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdatastream.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdatetime.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdeadlinetimer.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdebug.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qelapsedtimer.h
@@ -422,6 +474,24 @@ src/client/CMakeFiles/QChat.dir/clientcore.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qvector2d.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qvectornd.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qwindowdefs.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QNetworkAccessManager
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QSslConfiguration
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qabstractsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qhostaddress.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qhttpheaders.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qnetworkaccessmanager.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qnetworkrequest.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qssl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslcertificate.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslconfiguration.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslerror.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtcpsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetwork-config.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetworkexports.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetworkglobal.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QMessageBox
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qdialog.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qdialogbuttonbox.h
@@ -435,6 +505,7 @@ src/client/CMakeFiles/QChat.dir/loginwidget.cpp.o
  ../include/client/clientcore.h
  ../include/client/loginwidget.h
  ../include/client/mainchatwindow.h
+ ../include/client/picturemanager.h
  ../include/client/registerwidget.h
  ../include/common/group.hpp
  ../include/common/groupuser.hpp
@@ -442,12 +513,17 @@ src/client/CMakeFiles/QChat.dir/loginwidget.cpp.o
  ../include/common/user.hpp
  ../thirdparty/json.hpp
  /home/wmiracle/Codes/chatserver/src/client/loginwidget.cpp
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QFlags
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QList
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QMetaType
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QObject
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QRect
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSharedDataPointer
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSize
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSizeF
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QString
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QThread
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QUrl
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QVariant
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20functional.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20iterator.h
@@ -455,6 +531,7 @@ src/client/CMakeFiles/QChat.dir/loginwidget.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20type_traits.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20utility.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q23utility.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q26numeric.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qabstractitemmodel.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qalgorithms.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qanystringview.h
@@ -470,6 +547,7 @@ src/client/CMakeFiles/QChat.dir/loginwidget.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearrayalgorithms.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearraylist.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearrayview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcalendar.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qchar.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcompare.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcompare_impl.h
@@ -484,8 +562,10 @@ src/client/CMakeFiles/QChat.dir/loginwidget.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreapplication.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreapplication_platform.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreevent.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcryptographichash.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdarwinhelpers.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdatastream.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdatetime.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdeadlinetimer.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdebug.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qelapsedtimer.h
@@ -594,6 +674,7 @@ src/client/CMakeFiles/QChat.dir/loginwidget.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qversiontagging.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qxptype_traits.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qyieldcpu.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/QPixmap
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/QTransform
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qaction.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qbitmap.h
@@ -637,6 +718,24 @@ src/client/CMakeFiles/QChat.dir/loginwidget.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qvector2d.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qvectornd.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qwindowdefs.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QNetworkAccessManager
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QSslConfiguration
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qabstractsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qhostaddress.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qhttpheaders.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qnetworkaccessmanager.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qnetworkrequest.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qssl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslcertificate.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslconfiguration.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslerror.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtcpsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetwork-config.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetworkexports.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetworkglobal.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QApplication
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QLabel
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QLineEdit
@@ -691,26 +790,34 @@ src/client/CMakeFiles/QChat.dir/main.cpp.o
  ../include/client/clientcore.h
  ../include/client/loginwidget.h
  ../include/client/mainchatwindow.h
+ ../include/client/picturemanager.h
  ../include/common/group.hpp
  ../include/common/groupuser.hpp
  ../include/common/public.hpp
  ../include/common/user.hpp
  ../thirdparty/json.hpp
  /home/wmiracle/Codes/chatserver/src/client/main.cpp
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QFlags
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QList
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QLocale
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QMetaType
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QObject
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QRect
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSharedDataPointer
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSize
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSizeF
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QString
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QThread
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QTranslator
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QUrl
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QVariant
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20functional.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20iterator.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20memory.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20type_traits.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20utility.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q23utility.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q26numeric.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qabstractitemmodel.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qalgorithms.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qanystringview.h
@@ -726,6 +833,7 @@ src/client/CMakeFiles/QChat.dir/main.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearrayalgorithms.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearraylist.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearrayview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcalendar.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qchar.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcompare.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcompare_impl.h
@@ -740,8 +848,10 @@ src/client/CMakeFiles/QChat.dir/main.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreapplication.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreapplication_platform.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreevent.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcryptographichash.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdarwinhelpers.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdatastream.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdatetime.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdeadlinetimer.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdebug.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qelapsedtimer.h
@@ -851,6 +961,7 @@ src/client/CMakeFiles/QChat.dir/main.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qversiontagging.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qxptype_traits.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qyieldcpu.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/QPixmap
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/QTransform
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qaction.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qbitmap.h
@@ -871,6 +982,7 @@ src/client/CMakeFiles/QChat.dir/main.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qkeysequence.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpaintdevice.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpalette.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpicture.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpixelformat.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpixmap.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpointingdevice.h
@@ -880,6 +992,7 @@ src/client/CMakeFiles/QChat.dir/main.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qrgba64.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qscreen.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qscreen_platform.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtextdocument.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtgui-config.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtguiexports.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtguiglobal.h
@@ -888,7 +1001,26 @@ src/client/CMakeFiles/QChat.dir/main.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qvector2d.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qvectornd.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qwindowdefs.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QNetworkAccessManager
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QSslConfiguration
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qabstractsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qhostaddress.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qhttpheaders.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qnetworkaccessmanager.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qnetworkrequest.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qssl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslcertificate.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslconfiguration.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslerror.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtcpsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetwork-config.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetworkexports.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetworkglobal.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QApplication
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QLabel
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QListWidgetItem
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QMainWindow
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QWidget
@@ -899,6 +1031,7 @@ src/client/CMakeFiles/QChat.dir/main.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qabstractspinbox.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qapplication.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qframe.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlabel.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlistview.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlistwidget.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qmainwindow.h
@@ -916,18 +1049,27 @@ src/client/CMakeFiles/QChat.dir/main.cpp.o
 src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.o
  ../include/client/clientcore.h
  ../include/client/mainchatwindow.h
+ ../include/client/modifywidget.h
+ ../include/client/picturemanager.h
  ../include/common/group.hpp
  ../include/common/groupuser.hpp
  ../include/common/public.hpp
  ../include/common/user.hpp
  ../thirdparty/json.hpp
  /home/wmiracle/Codes/chatserver/src/client/mainchatwindow.cpp
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QDir
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QFlags
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QList
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QMetaType
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QObject
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QRect
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSharedDataPointer
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSize
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSizeF
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QStandardPaths
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QString
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QThread
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QUrl
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QVariant
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20functional.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20iterator.h
@@ -935,6 +1077,7 @@ src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20type_traits.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20utility.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q23utility.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q26numeric.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qabstractitemmodel.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qalgorithms.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qanystringview.h
@@ -950,6 +1093,7 @@ src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearrayalgorithms.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearraylist.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearrayview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcalendar.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qchar.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcompare.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcompare_impl.h
@@ -964,15 +1108,22 @@ src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreapplication.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreapplication_platform.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreevent.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcryptographichash.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdarwinhelpers.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdatastream.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdatetime.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdeadlinetimer.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdebug.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdir.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdirlisting.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qelapsedtimer.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qendian.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qeventloop.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qexception.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qexceptionhandling.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfile.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfiledevice.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfileinfo.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qflags.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfloat16.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qforeach.h
@@ -1030,6 +1181,7 @@ src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qsharedpointer_impl.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qsize.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qspan.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstandardpaths.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstring.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringalgorithms.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringbuilder.h
@@ -1056,6 +1208,7 @@ src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtextstream.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qthread.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qthreadpool.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtimezone.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtmetamacros.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtnoop.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtpreprocessorsupport.h
@@ -1074,6 +1227,7 @@ src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qversiontagging.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qxptype_traits.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qyieldcpu.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/QPixmap
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/QTransform
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qaction.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qbitmap.h
@@ -1095,6 +1249,7 @@ src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpaintdevice.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpalette.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpen.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpicture.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpixelformat.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpixmap.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpointingdevice.h
@@ -1116,7 +1271,26 @@ src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qvector2d.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qvectornd.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qwindowdefs.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QNetworkAccessManager
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QSslConfiguration
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qabstractsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qhostaddress.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qhttpheaders.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qnetworkaccessmanager.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qnetworkrequest.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qssl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslcertificate.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslconfiguration.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslerror.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtcpsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetwork-config.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetworkexports.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetworkglobal.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QApplication
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QLabel
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QLineEdit
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QListWidget
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QListWidgetItem
@@ -1141,6 +1315,7 @@ src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qdialogbuttonbox.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qframe.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qgridlayout.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlabel.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlayout.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlayoutitem.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlineedit.h
@@ -1164,22 +1339,28 @@ src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qtwidgetsglobal.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qwidget.h
  src/client/QChat_autogen/include/ui_mainchatwindow.h
-src/client/CMakeFiles/QChat.dir/registerwidget.cpp.o
+src/client/CMakeFiles/QChat.dir/modifywidget.cpp.o
  ../include/client/clientcore.h
- ../include/client/loginwidget.h
- ../include/client/registerwidget.h
+ ../include/client/modifywidget.h
+ ../include/client/picturemanager.h
  ../include/common/group.hpp
  ../include/common/groupuser.hpp
  ../include/common/public.hpp
  ../include/common/user.hpp
  ../thirdparty/json.hpp
- /home/wmiracle/Codes/chatserver/src/client/registerwidget.cpp
+ /home/wmiracle/Codes/chatserver/src/client/modifywidget.cpp
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QFlags
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QList
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QMetaType
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QObject
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QRect
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSharedDataPointer
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSize
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSizeF
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QStandardPaths
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QString
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QThread
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QUrl
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QVariant
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20functional.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20iterator.h
@@ -1187,6 +1368,8 @@ src/client/CMakeFiles/QChat.dir/registerwidget.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20type_traits.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20utility.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q23utility.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q26numeric.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qabstractitemmodel.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qalgorithms.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qanystringview.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qarraydata.h
@@ -1201,6 +1384,7 @@ src/client/CMakeFiles/QChat.dir/registerwidget.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearrayalgorithms.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearraylist.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearrayview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcalendar.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qchar.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcompare.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcompare_impl.h
@@ -1215,8 +1399,560 @@ src/client/CMakeFiles/QChat.dir/registerwidget.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreapplication.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreapplication_platform.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreevent.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcryptographichash.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdarwinhelpers.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdatastream.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdatetime.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdeadlinetimer.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdebug.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdir.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdirlisting.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qelapsedtimer.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qendian.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qeventloop.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qexception.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qexceptionhandling.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfile.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfiledevice.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfileinfo.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qflags.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfloat16.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qforeach.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfunctionaltools_impl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfunctionpointer.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfuture.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfuture_impl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfutureinterface.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qgenericatomic.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qglobal.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qglobalstatic.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qhash.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qhashfunctions.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qiodevice.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qiodevicebase.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qitemselectionmodel.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qiterable.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qiterator.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qlatin1stringview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qline.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qlist.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qlocale.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qlogging.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qmalloc.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qmap.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qmargins.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qmath.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qmetacontainer.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qmetatype.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qminmax.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qmutex.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qnamespace.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qnativeinterface.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qnumeric.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qobject.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qobject_impl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qobjectdefs.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qobjectdefs_impl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qoverload.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qpair.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qpoint.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qprocessordetection.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qpromise.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qrect.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qrefcount.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qregularexpression.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qresultstore.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qrunnable.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qscopedpointer.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qscopeguard.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qset.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qshareddata.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qshareddata_impl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qsharedpointer.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qsharedpointer_impl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qsize.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qspan.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstandardpaths.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstring.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringalgorithms.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringbuilder.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringconverter.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringconverter_base.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringfwd.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringlist.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringliteral.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringmatcher.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringtokenizer.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qswap.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qsysinfo.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qsystemdetection.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtaggedpointer.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtclasshelpermacros.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtconfiginclude.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtconfigmacros.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtcore-config.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtcoreexports.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtdeprecationdefinitions.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtdeprecationmarkers.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtenvironmentvariables.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtextstream.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qthread.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qthreadpool.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtimezone.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtmetamacros.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtnoop.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtpreprocessorsupport.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtresource.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtsan_impl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qttranslation.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qttypetraits.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtversion.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtversionchecks.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtypeinfo.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtypes.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qurl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qutf8stringview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qvariant.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qvarlengtharray.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qversiontagging.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qxptype_traits.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qyieldcpu.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/QPixmap
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/QTransform
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qaction.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qbitmap.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qbrush.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qcolor.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qcursor.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qevent.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qeventpoint.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qfont.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qfontinfo.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qfontmetrics.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qguiapplication.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qguiapplication_platform.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qicon.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qimage.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qinputdevice.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qinputmethod.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qkeysequence.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpaintdevice.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpalette.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpen.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpicture.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpixelformat.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpixmap.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpointingdevice.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpolygon.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qregion.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qrgb.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qrgba64.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qscreen.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qscreen_platform.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtextcursor.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtextdocument.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtextformat.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtextoption.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtgui-config.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtguiexports.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtguiglobal.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtransform.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qvalidator.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qvector2d.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qvectornd.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qwindowdefs.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QNetworkAccessManager
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QSslConfiguration
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qabstractsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qhostaddress.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qhttpheaders.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qnetworkaccessmanager.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qnetworkrequest.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qssl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslcertificate.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslconfiguration.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslerror.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtcpsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetwork-config.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetworkexports.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetworkglobal.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QApplication
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QFileDialog
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QLabel
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QLineEdit
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QListWidgetItem
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QMessageBox
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QPushButton
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QWidget
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qabstractbutton.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qabstractitemdelegate.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qabstractitemview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qabstractscrollarea.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qabstractslider.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qabstractspinbox.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qapplication.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qdialog.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qdialogbuttonbox.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qfiledialog.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qframe.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlabel.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlineedit.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlistview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlistwidget.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qmessagebox.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qpushbutton.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qrubberband.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qsizepolicy.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qslider.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qstyle.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qstyleoption.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qtabbar.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qtabwidget.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qtwidgets-config.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qtwidgetsexports.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qtwidgetsglobal.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qwidget.h
+ src/client/QChat_autogen/include/ui_modifywidget.h
+src/client/CMakeFiles/QChat.dir/picturemanager.cpp.o
+ ../include/client/clientcore.h
+ ../include/client/picturemanager.h
+ ../include/common/group.hpp
+ ../include/common/groupuser.hpp
+ ../include/common/public.hpp
+ ../include/common/user.hpp
+ ../thirdparty/json.hpp
+ /home/wmiracle/Codes/chatserver/src/client/picturemanager.cpp
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QBuffer
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QDir
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QFile
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QFlags
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QIODevice
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QJsonDocument
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QJsonObject
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QList
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QMetaType
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QObject
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QRect
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSharedDataPointer
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSize
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSizeF
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QStandardPaths
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QString
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QThread
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QUrl
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QVariant
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20functional.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20iterator.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20memory.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20type_traits.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20utility.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q23utility.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q26numeric.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qabstractitemmodel.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qalgorithms.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qanystringview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qarraydata.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qarraydataops.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qarraydatapointer.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qassert.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qatomic.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qatomic_cxx11.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbasicatomic.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbindingstorage.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbuffer.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearray.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearrayalgorithms.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearraylist.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearrayview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcalendar.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcborcommon.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcborvalue.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qchar.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcompare.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcompare_impl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcomparehelpers.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcompilerdetection.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qconfig.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qconstructormacros.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcontainerfwd.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcontainerinfo.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcontainertools_impl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcontiguouscache.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreapplication.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreapplication_platform.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreevent.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcryptographichash.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdarwinhelpers.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdatastream.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdatetime.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdeadlinetimer.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdebug.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdir.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdirlisting.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qelapsedtimer.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qendian.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qeventloop.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qexception.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qexceptionhandling.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfile.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfiledevice.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfileinfo.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qflags.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfloat16.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qforeach.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfunctionaltools_impl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfunctionpointer.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfuture.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfuture_impl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qfutureinterface.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qgenericatomic.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qglobal.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qglobalstatic.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qhash.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qhashfunctions.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qiodevice.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qiodevicebase.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qitemselectionmodel.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qiterable.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qiterator.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qjsondocument.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qjsonobject.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qjsonvalue.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qlatin1stringview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qline.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qlist.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qlocale.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qlogging.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qmalloc.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qmap.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qmargins.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qmath.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qmetacontainer.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qmetatype.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qminmax.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qmutex.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qnamespace.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qnativeinterface.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qnumeric.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qobject.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qobject_impl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qobjectdefs.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qobjectdefs_impl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qoverload.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qpair.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qpoint.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qprocessordetection.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qpromise.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qrect.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qrefcount.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qregularexpression.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qresultstore.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qrunnable.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qscopedpointer.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qscopeguard.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qset.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qshareddata.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qshareddata_impl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qsharedpointer.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qsharedpointer_impl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qsize.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qspan.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstandardpaths.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstring.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringalgorithms.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringbuilder.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringconverter.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringconverter_base.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringfwd.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringlist.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringliteral.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringmatcher.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringtokenizer.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qstringview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qswap.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qsysinfo.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qsystemdetection.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtaggedpointer.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtclasshelpermacros.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtconfiginclude.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtconfigmacros.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtcore-config.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtcoreexports.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtdeprecationdefinitions.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtdeprecationmarkers.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtenvironmentvariables.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtextstream.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qthread.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qthreadpool.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtimezone.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtmetamacros.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtnoop.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtpreprocessorsupport.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtresource.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtsan_impl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qttranslation.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qttypetraits.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtversion.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtversionchecks.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtypeinfo.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qtypes.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qurl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qutf8stringview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/quuid.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qvariant.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qvarlengtharray.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qversiontagging.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qxptype_traits.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qyieldcpu.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/QPixmap
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/QTransform
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qaction.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qbitmap.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qbrush.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qcolor.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qcursor.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qevent.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qeventpoint.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qfont.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qfontinfo.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qfontmetrics.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qguiapplication.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qguiapplication_platform.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qicon.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qimage.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qinputdevice.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qinputmethod.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qkeysequence.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpaintdevice.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpalette.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpicture.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpixelformat.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpixmap.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpointingdevice.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qpolygon.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qregion.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qrgb.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qrgba64.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qscreen.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qscreen_platform.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtextdocument.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtgui-config.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtguiexports.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtguiglobal.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qtransform.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qvalidator.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qvector2d.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qvectornd.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qwindowdefs.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QNetworkAccessManager
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QNetworkReply
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QNetworkRequest
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QSslConfiguration
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qabstractsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qhostaddress.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qhttpheaders.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qnetworkaccessmanager.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qnetworkreply.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qnetworkrequest.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qssl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslcertificate.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslconfiguration.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslerror.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtcpsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetwork-config.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetworkexports.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetworkglobal.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QLabel
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QListWidgetItem
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qabstractitemdelegate.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qabstractitemview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qabstractscrollarea.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qabstractslider.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qabstractspinbox.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qframe.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlabel.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlistview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qlistwidget.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qrubberband.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qsizepolicy.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qslider.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qstyle.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qstyleoption.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qtabbar.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qtabwidget.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qtwidgets-config.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qtwidgetsexports.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qtwidgetsglobal.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/qwidget.h
+src/client/CMakeFiles/QChat.dir/registerwidget.cpp.o
+ ../include/client/clientcore.h
+ ../include/client/loginwidget.h
+ ../include/client/registerwidget.h
+ ../include/common/group.hpp
+ ../include/common/groupuser.hpp
+ ../include/common/public.hpp
+ ../include/common/user.hpp
+ ../thirdparty/json.hpp
+ /home/wmiracle/Codes/chatserver/src/client/registerwidget.cpp
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QFlags
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QList
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QMetaType
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QObject
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QRect
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSharedDataPointer
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSize
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QSizeF
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QString
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QThread
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QUrl
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/QVariant
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20functional.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20iterator.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20memory.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20type_traits.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q20utility.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q23utility.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/q26numeric.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qalgorithms.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qanystringview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qarraydata.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qarraydataops.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qarraydatapointer.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qassert.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qatomic.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qatomic_cxx11.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbasicatomic.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbindingstorage.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearray.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearrayalgorithms.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearraylist.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qbytearrayview.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcalendar.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qchar.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcompare.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcompare_impl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcomparehelpers.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcompilerdetection.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qconfig.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qconstructormacros.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcontainerfwd.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcontainerinfo.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcontainertools_impl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcontiguouscache.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreapplication.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreapplication_platform.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcoreevent.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qcryptographichash.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdarwinhelpers.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdatastream.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdatetime.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdeadlinetimer.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qdebug.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtCore/qelapsedtimer.h
@@ -1365,6 +2101,24 @@ src/client/CMakeFiles/QChat.dir/registerwidget.cpp.o
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qvector2d.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qvectornd.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtGui/qwindowdefs.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QNetworkAccessManager
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QSslConfiguration
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qabstractsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qhostaddress.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qhttpheaders.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qnetworkaccessmanager.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qnetworkrequest.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qssl.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslcertificate.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslconfiguration.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslerror.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qsslsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtcpsocket.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetwork-config.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetworkexports.h
+ /home/wmiracle/Qt/6.8.3/gcc_64/include/QtNetwork/qtnetworkglobal.h
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QApplication
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QLabel
  /home/wmiracle/Qt/6.8.3/gcc_64/include/QtWidgets/QLineEdit

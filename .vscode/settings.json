@@ -68,7 +68,8 @@
         "qmessagebox": "cpp",
         "qwidget": "cpp",
         "span": "cpp",
-        "future": "cpp"
+        "future": "cpp",
+        "iomanip": "cpp"
     },
     "C_Cpp.default.compilerPath": "${workspaceFolder}/build/compile_commands.json"
 }

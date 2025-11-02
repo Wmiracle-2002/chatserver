@@ -2,4 +2,6 @@
 #include "V52LERMGDR/moc_clientcore.cpp"
 #include "V52LERMGDR/moc_loginwidget.cpp"
 #include "V52LERMGDR/moc_mainchatwindow.cpp"
+#include "V52LERMGDR/moc_modifywidget.cpp"
+#include "V52LERMGDR/moc_picturemanager.cpp"
 #include "V52LERMGDR/moc_registerwidget.cpp"

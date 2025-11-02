@@ -19,7 +19,14 @@ enum MsgType{
     QUIT_GROUP_ACK, // 退出群组响应消息
     GROUP_CHAT_MSG,  // 群聊天消息
     GROUP_DISSOLVED_MSG, // 群组已解散消息
-    FRIEND_DELETED_MSG  // 好友已删除消息
+    FRIEND_DELETED_MSG,  // 好友已删除消息
+    MODIFY_NAME_MSG,    // 修改用户名消息
+    MODIFY_NAME_ACK,    // 修改用户名响应消息
+    MODIFY_PASSWORD_MSG,    // 修改密码消息
+    MODIFY_PASSWORD_ACK,    // 修改密码响应消息
+    FRIEND_INFO_CHANGED,    // 好友信息更改消息
+    MODIFY_PICTURE_MSG, // 头像更改信息
+    MODIFY_PICTURE_ACK, // 头像更改响应信息
 };
 
 #endif

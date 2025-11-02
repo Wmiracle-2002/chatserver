@@ -14,6 +14,8 @@ public:
     // User表的删除方法
     // User表的修改方法
     bool updateState(ConnectionPool &cp, User user);
+    bool updateUsername(ConnectionPool &cp, User user);
+    bool updatePassword(ConnectionPool &cp, User user, string new_pwd);
     // User表的查询方法
     User query(ConnectionPool &cp, int id);
     // 重置用户的状态信息

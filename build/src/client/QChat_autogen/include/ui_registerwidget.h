@@ -41,10 +41,12 @@ public:
         registerButton->setGeometry(QRect(100, 220, 81, 31));
         nameLabel = new QLabel(RegisterWidget);
         nameLabel->setObjectName("nameLabel");
-        nameLabel->setGeometry(QRect(70, 100, 71, 21));
+        nameLabel->setGeometry(QRect(70, 100, 61, 21));
+        nameLabel->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
         againLabel = new QLabel(RegisterWidget);
         againLabel->setObjectName("againLabel");
-        againLabel->setGeometry(QRect(70, 180, 71, 21));
+        againLabel->setGeometry(QRect(20, 180, 111, 21));
+        againLabel->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
         nameEdit = new QLineEdit(RegisterWidget);
         nameEdit->setObjectName("nameEdit");
         nameEdit->setGeometry(QRect(140, 100, 141, 25));
@@ -61,7 +63,8 @@ public:
         QChatLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
         passwordLabel = new QLabel(RegisterWidget);
         passwordLabel->setObjectName("passwordLabel");
-        passwordLabel->setGeometry(QRect(70, 140, 71, 21));
+        passwordLabel->setGeometry(QRect(70, 140, 61, 21));
+        passwordLabel->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
         passwordEdit = new QLineEdit(RegisterWidget);
         passwordEdit->setObjectName("passwordEdit");
         passwordEdit->setGeometry(QRect(140, 140, 141, 25));
@@ -77,12 +80,12 @@ public:
     void retranslateUi(QWidget *RegisterWidget)
     {
         RegisterWidget->setWindowTitle(QCoreApplication::translate("RegisterWidget", "Form", nullptr));
-        registerButton->setText(QCoreApplication::translate("RegisterWidget", "Register", nullptr));
-        nameLabel->setText(QCoreApplication::translate("RegisterWidget", "name", nullptr));
-        againLabel->setText(QCoreApplication::translate("RegisterWidget", "again", nullptr));
+        registerButton->setText(QCoreApplication::translate("RegisterWidget", "\346\263\250\345\206\214", nullptr));
+        nameLabel->setText(QCoreApplication::translate("RegisterWidget", "\346\230\265\347\247\260\357\274\232", nullptr));
+        againLabel->setText(QCoreApplication::translate("RegisterWidget", "\345\206\215\346\254\241\350\276\223\345\205\245\345\257\206\347\240\201\357\274\232", nullptr));
         QChatLabel->setText(QCoreApplication::translate("RegisterWidget", "QChat", nullptr));
-        passwordLabel->setText(QCoreApplication::translate("RegisterWidget", "password", nullptr));
-        backButton->setText(QCoreApplication::translate("RegisterWidget", "Back", nullptr));
+        passwordLabel->setText(QCoreApplication::translate("RegisterWidget", "\345\257\206\347\240\201\357\274\232", nullptr));
+        backButton->setText(QCoreApplication::translate("RegisterWidget", "\350\277\224\345\233\236", nullptr));
     } // retranslateUi
 
 };

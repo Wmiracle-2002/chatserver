@@ -322,6 +322,60 @@ mainchatwindow.cpp.s:
 	cd /home/wmiracle/Codes/chatserver/build && $(MAKE) -f src/client/CMakeFiles/QChat.dir/build.make src/client/CMakeFiles/QChat.dir/mainchatwindow.cpp.s
 .PHONY : mainchatwindow.cpp.s
 
+modifywidget.o: modifywidget.cpp.o
+
+.PHONY : modifywidget.o
+
+# target to build an object file
+modifywidget.cpp.o:
+	cd /home/wmiracle/Codes/chatserver/build && $(MAKE) -f src/client/CMakeFiles/QChat.dir/build.make src/client/CMakeFiles/QChat.dir/modifywidget.cpp.o
+.PHONY : modifywidget.cpp.o
+
+modifywidget.i: modifywidget.cpp.i
+
+.PHONY : modifywidget.i
+
+# target to preprocess a source file
+modifywidget.cpp.i:
+	cd /home/wmiracle/Codes/chatserver/build && $(MAKE) -f src/client/CMakeFiles/QChat.dir/build.make src/client/CMakeFiles/QChat.dir/modifywidget.cpp.i
+.PHONY : modifywidget.cpp.i
+
+modifywidget.s: modifywidget.cpp.s
+
+.PHONY : modifywidget.s
+
+# target to generate assembly for a file
+modifywidget.cpp.s:
+	cd /home/wmiracle/Codes/chatserver/build && $(MAKE) -f src/client/CMakeFiles/QChat.dir/build.make src/client/CMakeFiles/QChat.dir/modifywidget.cpp.s
+.PHONY : modifywidget.cpp.s
+
+picturemanager.o: picturemanager.cpp.o
+
+.PHONY : picturemanager.o
+
+# target to build an object file
+picturemanager.cpp.o:
+	cd /home/wmiracle/Codes/chatserver/build && $(MAKE) -f src/client/CMakeFiles/QChat.dir/build.make src/client/CMakeFiles/QChat.dir/picturemanager.cpp.o
+.PHONY : picturemanager.cpp.o
+
+picturemanager.i: picturemanager.cpp.i
+
+.PHONY : picturemanager.i
+
+# target to preprocess a source file
+picturemanager.cpp.i:
+	cd /home/wmiracle/Codes/chatserver/build && $(MAKE) -f src/client/CMakeFiles/QChat.dir/build.make src/client/CMakeFiles/QChat.dir/picturemanager.cpp.i
+.PHONY : picturemanager.cpp.i
+
+picturemanager.s: picturemanager.cpp.s
+
+.PHONY : picturemanager.s
+
+# target to generate assembly for a file
+picturemanager.cpp.s:
+	cd /home/wmiracle/Codes/chatserver/build && $(MAKE) -f src/client/CMakeFiles/QChat.dir/build.make src/client/CMakeFiles/QChat.dir/picturemanager.cpp.s
+.PHONY : picturemanager.cpp.s
+
 registerwidget.o: registerwidget.cpp.o
 
 .PHONY : registerwidget.o
@@ -378,6 +432,12 @@ help:
 	@echo "... mainchatwindow.o"
 	@echo "... mainchatwindow.i"
 	@echo "... mainchatwindow.s"
+	@echo "... modifywidget.o"
+	@echo "... modifywidget.i"
+	@echo "... modifywidget.s"
+	@echo "... picturemanager.o"
+	@echo "... picturemanager.i"
+	@echo "... picturemanager.s"
 	@echo "... registerwidget.o"
 	@echo "... registerwidget.i"
 	@echo "... registerwidget.s"

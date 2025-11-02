@@ -39,6 +39,12 @@ src/server/CMakeFiles/ChatServer.dir/db/connpool.cpp.o
 src/server/CMakeFiles/ChatServer.dir/db/mysqlconn.cpp.o
  ../include/server/db/mysqlconn.h
  /home/wmiracle/Codes/chatserver/src/server/db/mysqlconn.cpp
+src/server/CMakeFiles/ChatServer.dir/httpserver.cpp.o
+ ../include/server/httpserver.hpp
+ ../include/server/picturehandler.hpp
+ ../thirdparty/httplib.h
+ ../thirdparty/json.hpp
+ /home/wmiracle/Codes/chatserver/src/server/httpserver.cpp
 src/server/CMakeFiles/ChatServer.dir/main.cpp.o
  ../include/common/group.hpp
  ../include/common/groupuser.hpp
@@ -47,11 +53,13 @@ src/server/CMakeFiles/ChatServer.dir/main.cpp.o
  ../include/server/chatservice.hpp
  ../include/server/db/connpool.h
  ../include/server/db/mysqlconn.h
+ ../include/server/httpserver.hpp
  ../include/server/model/friendmodel.hpp
  ../include/server/model/groupmodel.hpp
  ../include/server/model/offlinemsgmodel.hpp
  ../include/server/model/usermodel.hpp
  ../include/server/redis/redis.hpp
+ ../thirdparty/httplib.h
  ../thirdparty/json.hpp
  /home/wmiracle/Codes/chatserver/src/server/main.cpp
 src/server/CMakeFiles/ChatServer.dir/model/friendmodel.cpp.o
@@ -83,6 +91,11 @@ src/server/CMakeFiles/ChatServer.dir/model/usermodel.cpp.o
  ../include/server/model/usermodel.hpp
  ../thirdparty/json.hpp
  /home/wmiracle/Codes/chatserver/src/server/model/usermodel.cpp
+src/server/CMakeFiles/ChatServer.dir/picturehandler.cpp.o
+ ../include/common/public.hpp
+ ../include/server/picturehandler.hpp
+ ../thirdparty/json.hpp
+ /home/wmiracle/Codes/chatserver/src/server/picturehandler.cpp
 src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o
  ../include/server/redis/redis.hpp
  /home/wmiracle/Codes/chatserver/src/server/redis/redis.cpp

@@ -37,10 +37,29 @@ void ChatServer::onConnection(const TcpConnectionPtr& conn){
 void ChatServer::onMessage(const TcpConnectionPtr& conn, Buffer *buffer, Timestamp time){
     string buf = buffer->retrieveAllAsString();
     cout << buf << endl;
-    // 数据的反序列化
-    json js = json::parse(buf);
-    // 通过js["msgid"]获取业务handler，完全解耦网络模块的代码和业务模块的代码
-    MsgHandler msgh = ChatService::instance()->getHandler(js["msgid"].get<int>());
-    // 回调消息绑定好的事件处理器来执行相应的业务处理
-    msgh(conn, js, time);
+    try {
+        // 数据的反序列化
+        json js = json::parse(buf);
+
+        // 确保js是对象类型，而不是其他类型（比如字符串）
+        if (!js.is_object()) {
+            std::cerr << "错误: 解析到的JSON不是对象" << std::endl;
+            return;
+        }
+
+        // 检查是否存在msgid字段
+        if (!js.contains("msgid")) {
+            std::cerr << "错误: 消息缺少msgid字段" << std::endl;
+            return;
+        }
+        // 获取消息处理器并处理
+        // 通过js["msgid"]获取业务handler，完全解耦网络模块的代码和业务模块的代码
+        MsgHandler msgh = ChatService::instance()->getHandler(js["msgid"].get<int>());
+        // 回调消息绑定好的事件处理器来执行相应的业务处理
+        msgh(conn, js, time);
+    }
+    catch (const json::exception& e) {
+        std::cerr << "JSON解析异常: " << e.what() << std::endl;
+        std::cerr << "原始数据: " << buf << std::endl;
+    }
 }

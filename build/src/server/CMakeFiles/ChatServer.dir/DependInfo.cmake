@@ -8,11 +8,13 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/wmiracle/Codes/chatserver/src/server/chatservice.cpp" "/home/wmiracle/Codes/chatserver/build/src/server/CMakeFiles/ChatServer.dir/chatservice.cpp.o"
   "/home/wmiracle/Codes/chatserver/src/server/db/connpool.cpp" "/home/wmiracle/Codes/chatserver/build/src/server/CMakeFiles/ChatServer.dir/db/connpool.cpp.o"
   "/home/wmiracle/Codes/chatserver/src/server/db/mysqlconn.cpp" "/home/wmiracle/Codes/chatserver/build/src/server/CMakeFiles/ChatServer.dir/db/mysqlconn.cpp.o"
+  "/home/wmiracle/Codes/chatserver/src/server/httpserver.cpp" "/home/wmiracle/Codes/chatserver/build/src/server/CMakeFiles/ChatServer.dir/httpserver.cpp.o"
   "/home/wmiracle/Codes/chatserver/src/server/main.cpp" "/home/wmiracle/Codes/chatserver/build/src/server/CMakeFiles/ChatServer.dir/main.cpp.o"
   "/home/wmiracle/Codes/chatserver/src/server/model/friendmodel.cpp" "/home/wmiracle/Codes/chatserver/build/src/server/CMakeFiles/ChatServer.dir/model/friendmodel.cpp.o"
   "/home/wmiracle/Codes/chatserver/src/server/model/groupmodel.cpp" "/home/wmiracle/Codes/chatserver/build/src/server/CMakeFiles/ChatServer.dir/model/groupmodel.cpp.o"
   "/home/wmiracle/Codes/chatserver/src/server/model/offlinemsgmodel.cpp" "/home/wmiracle/Codes/chatserver/build/src/server/CMakeFiles/ChatServer.dir/model/offlinemsgmodel.cpp.o"
   "/home/wmiracle/Codes/chatserver/src/server/model/usermodel.cpp" "/home/wmiracle/Codes/chatserver/build/src/server/CMakeFiles/ChatServer.dir/model/usermodel.cpp.o"
+  "/home/wmiracle/Codes/chatserver/src/server/picturehandler.cpp" "/home/wmiracle/Codes/chatserver/build/src/server/CMakeFiles/ChatServer.dir/picturehandler.cpp.o"
   "/home/wmiracle/Codes/chatserver/src/server/redis/redis.cpp" "/home/wmiracle/Codes/chatserver/build/src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Register</string>
+    <string>注册</string>
    </property>
   </widget>
   <widget class="QLabel" name="nameLabel">
@@ -31,25 +31,31 @@
     <rect>
      <x>70</x>
      <y>100</y>
-     <width>71</width>
+     <width>61</width>
      <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>name</string>
+    <string>昵称：</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="againLabel">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>20</x>
      <y>180</y>
-     <width>71</width>
+     <width>111</width>
      <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>again</string>
+    <string>再次输入密码：</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="nameEdit">
@@ -101,12 +107,15 @@
     <rect>
      <x>70</x>
      <y>140</y>
-     <width>71</width>
+     <width>61</width>
      <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>password</string>
+    <string>密码：</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="passwordEdit">
@@ -129,7 +138,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Back</string>
+    <string>返回</string>
    </property>
   </widget>
  </widget>
